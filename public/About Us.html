@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Rubyland Limited - Real Estate Excellence Since 1999</title>
+    <meta name="description" content="For 24+ years, Rubyland Limited has been Kenya's trusted real estate partner. Our expert team has helped thousands make confident property decisions.">
+    
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- ApexCharts -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.46.0/dist/apexcharts.min.js"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo ONLY.png"/>
+    <link rel="stylesheet" href="Assets/css/about.css"/>
+    <link rel="stylesheet" href="Assets/css/main.css"/>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <!-- Contact Navbar (Same as main page) -->
+     <div class="navbar-section">
+    <div class="contact-navbar">
+        <div class="container">
+            <div class="contact-info">
+                <div><i class="fas fa-phone"></i> +254 700 000 000</div>
+                <div><i class="fas fa-envelope"></i> info@rubyland.co.ke</div>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navbar -->
+    <nav class="main-navbar">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo"><img src="Assets/img/logo ONLY.png" alt="">Ruby<span>land</span></a>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">About Us <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#">Who We Are</a>
+                        <a href="#">The Team</a>
+                        <a href="#">Our Story</a>
+                        <a href="#">Branches</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">Services <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content services-dropdown">
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>Property Valuation</h4>
+                                <p>Accurate property assessments for various purposes</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>Property Search</h4>
+                                <p>Find your ideal property with our expert guidance</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>Title Deed Services</h4>
+                                <p>Secure and verify your property ownership documents</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>Market Analysis</h4>
+                                <p>Comprehensive real estate market insights</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fas fa-handshake"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>Consultation</h4>
+                                <p>Expert advice for all your real estate concerns</p>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="service-info">
+                                <h4>Training</h4>
+                                <p>Real estate investment education and workshops</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="listings.html">Available Listings</a></li>
+                <li><a href="contact.html" class="active">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    </div>
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="hero-content">
+            <h1>We Are The Ones To Help You</h1>
+            <p>For over 24 years, Rubyland Limited has been Kenya's trusted real estate partner, transforming property challenges into secure investments and confident decisions.</p>
+            <a href="#our-story" class="btn btn-primary">Discover Our Journey</a>
+            
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="stat-number" id="years-counter">0</span>
+                    <span class="stat-text">Years Experience</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-number" id="clients-counter">0</span>
+                    <span class="stat-text">Clients Helped</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-number" id="valuations-counter">0</span>
+                    <span class="stat-text">Valuations Completed</span>
+                </div>
+                <div class="hero-stat">
+                    <span class="stat-number" id="counties-counter">0</span>
+                    <span class="stat-text">Counties Covered</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is Rubyland? Section -->
+<section id="what-is-rubyland" class="section what-is-rubyland">
+    <div class="container">
+        <h2 class="section-title">What is Rubyland?</h2>
+        <div class="rubyland-intro">
+            <div class="intro-content animate-on-scroll">
+                <div class="intro-card">
+                    <div class="intro-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Rubyland Limited</h3>
+                    <p class="intro-subtitle">A registered and licensed real estate consultancy firm with 24+ years of excellence in Kenya and East Africa.</p>
+                </div>
+                
+                <div class="intro-card">
+                    <div class="intro-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Purpose</h3>
+                    <p>To transform real estate complexity into clarity, helping individuals and institutions make confident, informed property decisions that build wealth and secure futures.</p>
+                </div>
+                
+                <div class="intro-card">
+                    <div class="intro-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>The Problem We Solve</h3>
+                    <p>Real estate in Kenya is plagued by title fraud, valuation inaccuracies, legal complexities, and market opacity. These challenges cost investors millions annually in losses and missed opportunities.</p>
+                </div>
+                
+                <div class="intro-card">
+                    <div class="intro-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Our Impact</h3>
+                    <p>Over 24 years, we've protected KSh 12+ billion in client investments, conducted 5,000+ valuations recognized by banks, delivered feasibility studies worth USD 1.2M+, and helped 7,800+ clients achieve their property goals with zero title disputes.</p>
+                </div>
+            </div>
+            
+            <div class="impact-stats animate-on-scroll">
+                <div class="impact-stat">
+                    <span class="impact-number">24+</span>
+                    <span class="impact-text">Years Protecting Investors</span>
+                </div>
+                <div class="impact-stat">
+                    <span class="impact-number">7,800+</span>
+                    <span class="impact-text">Clients Successfully Served</span>
+                </div>
+                <div class="impact-stat">
+                    <span class="impact-number">0</span>
+                    <span class="impact-text">Title Disputes on Our Watch</span>
+                </div>
+                <div class="impact-stat">
+                    <span class="impact-number">47</span>
+                    <span class="impact-text">Counties Covered Nationwide</span>
+                </div>
+            </div>
+            
+            <div class="intro-cta animate-on-scroll">
+                <p class="cta-text"><strong>Simply put:</strong> We are the shield against real estate risks, the guide through market complexity, and the partner who ensures your property journey is secure, profitable, and stress-free.</p>
+                <a href="contact us.html" class="btn btn-primary">Start Your Secure Journey</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Our Story Section -->
+    <section id="our-story" class="section our-story">
+        <div class="container">
+            <h2 class="section-title">Our Legacy of Excellence</h2>
+            <div class="story-container">
+                <div class="story-content animate-on-scroll">
+                    <h2>24 Years of Transforming Real Estate in Kenya</h2>
+                    <p>Founded in 1999, Rubyland Limited emerged from a simple yet powerful vision: to bring transparency, expertise, and trust to Kenya's real estate market. What began as a small valuation firm has grown into East Africa's premier real estate consultancy.</p>
+                    <p>We've witnessed the market's evolution, navigated economic shifts, and consistently delivered results that protect and grow our clients' investments. Our journey is marked by thousands of successful transactions, lasting client relationships, and an unwavering commitment to ethical practice.</p>
+                    <p>Today, with offices across Kenya and expanding regional presence, we continue to set the standard for real estate excellence, guided by our founding principles of integrity, expertise, and client-first service.</p>
+                    <a href="#core-services" class="services-btn">Our Services</a>
+                </div>
+                <div class="story-image animate-on-scroll">
+                    <img src="https://avenuerealtygroup.com/wp-content/uploads/2023/06/A-Brief-History-of-Real-Estate.jpg" alt="Rubyland Legacy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="section mission-vision">
+        <div class="container">
+            <h2 class="section-title">Our Guiding Principles</h2>
+            <div class="mv-grid">
+                <div class="mv-card animate-on-scroll">
+                    <div class="mv-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To empower individuals and organizations with expert real estate solutions that build wealth, secure assets, and create sustainable value through transparent, innovative, and client-focused services.</p>
+                </div>
+                <div class="mv-card animate-on-scroll">
+                    <div class="mv-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To be East Africa's most trusted real estate partner, recognized for transforming property markets through excellence, integrity, and innovation that delivers unparalleled client success.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Cards -->
+    <section class="section why-choose-cards">
+        <div class="container">
+            <h2 class="section-title">Why Rubyland Stands Apart</h2>
+            <div class="cards-grid">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h4>24+ Years Experience</h4>
+                    <p>Deep market knowledge from thousands of successful transactions across all property types and regions.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h4>Bank-Recognized Valuations</h4>
+                    <p>Our valuation reports are trusted by leading financial institutions, courts, and government agencies.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h4>Nationwide Coverage</h4>
+                    <p>Presence across all 47 Kenyan counties with expanding East African reach and local expertise.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h4>Expert Team</h4>
+                    <p>Multi-disciplinary professionals combining legal, financial, and property expertise for comprehensive solutions.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4>Risk-Free Guarantee</h4>
+                    <p>Professional indemnity cover and due diligence processes that protect your investment at every stage.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Proven Track Record</h4>
+                    <p>Feasibility studies worth over USD 1.2M and valuations securing billions in client investments.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Timeline -->
+    <section class="section roadmap">
+        <div class="container">
+            <h2 class="section-title">Our Growth Journey</h2>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">1999 - 2005</span>
+                        <h3>Foundation & Establishment</h3>
+                        <p>Rubyland Limited founded as a property valuation firm. Built reputation with banks and financial institutions. Expanded to major Kenyan cities.</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2006 - 2012</span>
+                        <h3>Expansion & Diversification</h3>
+                        <p>Added feasibility studies and due diligence services. Recognized by courts as expert witnesses. Expanded to all 47 counties.</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2013 - 2018</span>
+                        <h3>Regional Growth</h3>
+                        <p>Established East African presence. Introduced property management and training divisions. Reached 1,000+ client milestone.</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2019 - 2022</span>
+                        <h3>Digital Transformation</h3>
+                        <p>Launched online valuation tools and virtual consultations. Enhanced due diligence with technology. USD 1.2M+ feasibility studies milestone.</p>
+                    </div>
+                </div>
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2023 - 2026</span>
+                        <h3>Future Vision</h3>
+                        <p>East African market leadership. AI-powered valuation models. Sustainable property solutions. Training 10,000+ real estate professionals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="the-team" class="section team-section">
+        <div class="container">
+            <h2 class="section-title">Meet Our Leadership</h2>
+            <div class="team-grid">
+                <div class="team-card animate-on-scroll">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="John Kamau">
+                    </div>
+                    <div class="team-info">
+                        <h4>John Kamau</h4>
+                        <p class="team-role">Founder & CEO</p>
+                        <p>24+ years real estate experience. Chartered Valuer.</p>
+                    </div>
+                </div>
+                <div class="team-card animate-on-scroll">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Sarah Wanjiku">
+                    </div>
+                    <div class="team-info">
+                        <h4>Sarah Wanjiku</h4>
+                        <p class="team-role">Director of Operations</p>
+                        <p>18 years in property management and development.</p>
+                    </div>
+                </div>
+                <div class="team-card animate-on-scroll">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Michael Otieno">
+                    </div>
+                    <div class="team-info">
+                        <h4>Michael Otieno</h4>
+                        <p class="team-role">Head of Valuation</p>
+                        <p>15+ years, registered valuer with financial institutions.</p>
+                    </div>
+                </div>
+                <div class="team-card animate-on-scroll">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Grace Akinyi">
+                    </div>
+                    <div class="team-info">
+                        <h4>Grace Akinyi</h4>
+                        <p class="team-role">Legal Director</p>
+                        <p>LLB, LLM, specializing in real estate law and compliance.</p>
+                    </div>
+                </div>
+                <div class="team-card animate-on-scroll">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="David Njoroge">
+                    </div>
+                    <div class="team-info">
+                        <h4>David Njoroge</h4>
+                        <p class="team-role">Head of Research</p>
+                        <p>PhD in Urban Planning, market analysis expert.</p>
+                    </div>
+                </div>
+                <div class="team-card animate-on-scroll">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Maryanne Kariuki">
+                    </div>
+                    <div class="team-info">
+                        <h4>Maryanne Kariuki</h4>
+                        <p class="team-role">Client Relations Director</p>
+                        <p>12+ years in client service and portfolio management.</p>
+                    </div>
+                </div>
+                <div class="team-card animate-on-scroll">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005-128?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Peter Mwangi">
+                    </div>
+                    <div class="team-info">
+                        <h4>Peter Mwangi</h4>
+                        <p class="team-role">Technical Director</p>
+                        <p>Chartered Surveyor with 20+ years international experience.</p>
+                    </div>
+                </div>
+                <div class="team-card animate-on-scroll">
+                    <div class="team-img">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Elizabeth Adhiambo">
+                    </div>
+                    <div class="team-info">
+                        <h4>Elizabeth Adhiambo</h4>
+                        <p class="team-role">Finance Director</p>
+                        <p>CPA(K), 15 years in real estate finance and investment.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="show-more-container">
+                <button id="showMoreTeam" class="btn btn-outline">View All Team Members</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Graph -->
+    <section class="section impact-graph">
+        <div class="container">
+            <h2 class="section-title">Our Impact Over 24 Years</h2>
+            <div class="graph-container animate-on-scroll">
+                <h3>Clients Helped & Valuations Completed (2000-2024)</h3>
+                <div id="impactChart"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branches Map -->
+    <section class="section branches-map">
+        <div class="container">
+            <h2 class="section-title">Nationwide Presence</h2>
+            <div class="map-container animate-on-scroll">
+                <!-- Simplified Kenya map with pins -->
+                <svg class="kenya-map" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+    <!-- Kenya outline in primary red color -->
+    <path d="M400,100 L500,150 L550,250 L500,350 L450,400 L400,450 L350,500 L300,550 L250,600 L200,650 L150,600 L100,550 L150,450 L200,350 L250,250 L300,150 Z" 
+          fill="none" 
+          stroke="#cf0202" 
+          stroke-width="4"
+          stroke-linejoin="round"/>
+    
+    <!-- Nairobi Pin -->
+    <g class="map-pin" data-city="nairobi" style="left: 50%; top: 40%; transform: translate(-50%, -50%) rotate(-45deg);">
+        <circle cx="0" cy="0" r="14" fill="#cf0202" class="pin-circle"/>
+        <circle cx="0" cy="0" r="7" fill="white"/>
+        <animate attributeName="opacity" values="1;0.7;1" dur="2s" repeatCount="indefinite"/>
+    </g>
+    
+    <!-- Mombasa Pin -->
+    <g class="map-pin" data-city="mombasa" style="left: 70%; top: 70%; transform: translate(-50%, -50%) rotate(-45deg);">
+        <circle cx="0" cy="0" r="14" fill="#cf0202" class="pin-circle"/>
+        <circle cx="0" cy="0" r="7" fill="white"/>
+        <animate attributeName="opacity" values="1;0.7;1" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+    </g>
+    
+    <!-- Kisumu Pin -->
+    <g class="map-pin" data-city="kisumu" style="left: 40%; top: 60%; transform: translate(-50%, -50%) rotate(-45deg);">
+        <circle cx="0" cy="0" r="14" fill="#cf0202" class="pin-circle"/>
+        <circle cx="0" cy="0" r="7" fill="white"/>
+        <animate attributeName="opacity" values="1;0.7;1" dur="2s" repeatCount="indefinite" begin="1s"/>
+    </g>
+    
+    <!-- Nakuru Pin -->
+    <g class="map-pin" data-city="nakuru" style="left: 45%; top: 45%; transform: translate(-50%, -50%) rotate(-45deg);">
+        <circle cx="0" cy="0" r="14" fill="#cf0202" class="pin-circle"/>
+        <circle cx="0" cy="0" r="7" fill="white"/>
+        <animate attributeName="opacity" values="1;0.7;1" dur="2s" repeatCount="indefinite" begin="1.5s"/>
+    </g>
+    
+    <!-- City labels (optional, shown on hover) -->
+    <text x="50%" y="35%" text-anchor="middle" fill="#cf0202" font-size="18" font-weight="bold" opacity="0" class="city-label" data-city="nairobi">Nairobi</text>
+    <text x="72%" y="68%" text-anchor="middle" fill="#cf0202" font-size="18" font-weight="bold" opacity="0" class="city-label" data-city="mombasa">Mombasa</text>
+    <text x="38%" y="58%" text-anchor="middle" fill="#cf0202" font-size="18" font-weight="bold" opacity="0" class="city-label" data-city="kisumu">Kisumu</text>
+    <text x="43%" y="42%" text-anchor="middle" fill="#cf0202" font-size="18" font-weight="bold" opacity="0" class="city-label" data-city="nakuru">Nakuru</text>
+</svg>
+                
+                <div id="pinTooltip" class="pin-tooltip"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Services -->
+    <section id="core-services" class="section core-services">
+        <div class="container">
+            <h2 class="section-title">Our Core Services</h2>
+            <div class="services-container">
+                <div class="service-item animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="service-content">
+                        <h4>Property Valuation & Appraisals</h4>
+                        <p>Accurate, bank-recognized valuations for residential, commercial, industrial, and special purpose properties. Our reports are trusted by financial institutions, courts, and government agencies.</p>
+                    </div>
+                </div>
+                <div class="service-item animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="service-content">
+                        <h4>Due Diligence Services</h4>
+                        <p>Comprehensive title verification, legal compliance checks, and risk assessment that protect investors from costly mistakes and fraudulent transactions.</p>
+                    </div>
+                </div>
+                <div class="service-item animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="service-content">
+                        <h4>Feasibility Studies</h4>
+                        <p>Detailed analysis of development potential, ROI projections, and market viability. We've conducted studies worth over USD 1.2 million in property investments.</p>
+                    </div>
+                </div>
+                <div class="service-item animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="service-content">
+                        <h4>Property & Facilities Management</h4>
+                        <p>End-to-end management solutions that maximize property value, ensure compliance, and optimize operational efficiency for residential and commercial portfolios.</p>
+                    </div>
+                </div>
+                <div class="service-item animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <div class="service-content">
+                        <h4>Market Research & Surveys</h4>
+                        <p>Data-driven insights on market trends, pricing analysis, and investment opportunities across all 47 counties and emerging markets.</p>
+                    </div>
+                </div>
+                <div class="service-item animate-on-scroll">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="service-content">
+                        <h4>Training & Real Estate Consultancy</h4>
+                        <p>Professional development programs, investment workshops, and expert advisory services for individuals, corporations, and institutional clients.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Assurance Section -->
+    <section class="section assurance">
+        <div class="container">
+            <h2>Your Real Estate Journey, Secured</h2>
+            <p>At Rubyland, we transform the complex, stressful world of real estate into clear, confident decisions. We don't just provide services—we deliver peace of mind, protect your investments, and unlock opportunities others miss.</p>
+            <p>With professional indemnity coverage, 24+ years of proven results, and a client-first approach, we stand by every recommendation, every valuation, every step of your property journey.</p>
+            <a href="contact us.html" class="btn btn-primary">Start Your Secure Journey</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="logo">
+                        <img src="assets/img/logo ONLY.png" alt="Rubyland Limited">
+                        <span>Ruby<span>land</span><br>Limited</span>
+                    </div>
+                    <p>With over 24 years of experience, Rubyland Limited is your trusted partner for all real estate needs in Kenya. We provide expert valuation, consultation, and property services to individuals and businesses.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="listings.html">Properties</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Property Valuation</a></li>
+                        <li><a href="#">Feasibility Studies</a></li>
+                        <li><a href="#">Title Deed Services</a></li>
+                        <li><a href="#">Property Search</a></li>
+                        <li><a href="#">Market Analysis</a></li>
+                        <li><a href="#">Investment Training</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Office Locations</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Nairobi Headquarters</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Mombasa Branch</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Kisumu Office</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</li>
+                        <li><i class="fas fa-clock"></i> Sat: 9:00 AM - 1:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Rubyland Limited. All Rights Reserved. | <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="Assets/js/main.js"></script>
+    <script src="Assets/js/about.js"></script>
+</body>
+</html>
