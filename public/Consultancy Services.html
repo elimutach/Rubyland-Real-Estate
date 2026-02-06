@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Consultancy Services | Rubyland Limited - Expert Advisory for Strategic Decisions</title>
+    
+    <!-- SEO & Meta Tags -->
+    <meta name="description" content="Professional real estate consultancy services for strategic investment decisions. Expert guidance for development projects, portfolio optimization, and investment planning.">
+    <meta name="keywords" content="real estate consultancy Kenya, property advisory, investment consultancy, development advisory, real estate consulting">
+    
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo ONLY.png"/>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="Assets/css/main.css"/>
+    <script src="Assets/js/header.js" type="text/javascript" defer></script>
+    <script src="Assets/js/footer.js" type="text/javascript" defer></script>
+    <style>
+        /* ===== CONSULTANCY SERVICES PAGE STYLES ===== */
+        :root {
+            --consultancy-red:#cb1111;
+            --consultancy-light-purple: #ffe8e8;
+            --consultancy-teal: #d8b800;
+            --consultancy-light-teal: #e0f7fa;
+            --consultancy-gold: #d4af37;
+            --consultancy-light-gold: #fff8e1;
+        }
+        
+        /* Hero Section */
+        .consultancy-hero {
+            height: 85vh;
+            background: linear-gradient(135deg, rgba(203, 17, 17, 0.5), rgba(252, 184, 37, 0.2)), 
+                        url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .consultancy-hero-content {
+            max-width: 900px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .consultancy-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+        
+        .consultancy-hero h1 span {
+            color: #ffd700;
+        }
+        
+        .consultancy-stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .consultancy-stat-item {
+            text-align: center;
+            animation: fadeInUp 1s ease-out 0.6s forwards;
+            opacity: 0;
+        }
+        
+        .consultancy-stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #ffd700;
+            display: block;
+            margin-bottom: 5px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .consultancy-stat-text {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Consultancy Value */
+        .consultancy-value {
+            background: var(--light-gray);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .consultancy-value-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .consultancy-value-content h2 {
+            color: var(--consultancy-red);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .consultancy-value-content h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--consultancy-red);
+        }
+        
+        .consultancy-value-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-strong);
+            position: relative;
+            height: 500px;
+        }
+        
+        .consultancy-value-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .consultancy-value-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .consultancy-tagline {
+            background: var(--consultancy-light-purple);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-top: 30px;
+            border-left: 4px solid var(--consultancy-red);
+            font-style: italic;
+            font-weight: 500;
+        }
+        
+        /* Consultancy Services */
+        .consultancy-services {
+            background: var(--white);
+        }
+        
+        .consultancy-services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .consultancy-service-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            position: relative;
+            height: 100%;
+        }
+        
+        .consultancy-service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .consultancy-service-card:hover .consultancy-service-icon {
+            background: var(--consultancy-red);
+            color: var(--white);
+        }
+        
+        .consultancy-service-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(106, 17, 203, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px auto 25px;
+            color: var(--consultancy-red);
+            font-size: 32px;
+            transition: var(--transition);
+        }
+        
+        .consultancy-service-content {
+            padding: 0 25px 30px;
+            text-align: center;
+        }
+        
+        .consultancy-service-content h3 {
+            margin-bottom: 15px;
+            color: var(--dark-gray);
+        }
+        
+        /* Consultancy Stats */
+        .consultancy-stats-section {
+            background: linear-gradient(135deg, var(--consultancy-red) 0%, var(--consultancy-teal) 100%);
+            color: var(--white);
+            padding: 80px 0;
+        }
+        
+        .consultancy-stats-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        
+        .consultancy-stat-box {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+        
+        .consultancy-stat-box:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .consultancy-stat-box-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--white);
+            display: block;
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .consultancy-stat-box-text {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        
+        /* Advisory Process */
+        .advisory-process {
+            background: var(--light-gray);
+        }
+        
+        .advisory-process-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .advisory-steps-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        
+        .advisory-step-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 35px 30px;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            position: relative;
+            border: 1px solid rgba(106, 17, 203, 0.1);
+            height: 100%;
+        }
+        
+        .advisory-step-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--consultancy-red);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .advisory-step-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .advisory-step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--consultancy-red);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .advisory-step-title {
+            font-size: 1.4rem;
+            color: var(--consultancy-red);
+            margin: 0;
+        }
+        
+        /* Case Studies */
+        .consultancy-cases {
+            background: var(--white);
+            padding: 100px 0;
+        }
+        
+        .consultancy-cases-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .consultancy-cases-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .consultancy-case-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+        }
+        
+        .consultancy-case-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .consultancy-case-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .consultancy-case-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .consultancy-case-card:hover .consultancy-case-image img {
+            transform: scale(1.05);
+        }
+        
+        .consultancy-case-content {
+            padding: 30px;
+        }
+        
+        .consultancy-case-tag {
+            display: inline-block;
+            background: var(--consultancy-light-purple);
+            color: var(--consultancy-red);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .consultancy-case-content h3 {
+            margin-bottom: 10px;
+            color: var(--dark-gray);
+        }
+        
+        /* CTA Section */
+        .consultancy-cta {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                        url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        .consultancy-cta h2 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+        
+        .consultancy-cta p {
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .consultancy-cta-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .consultancy-cta-stat {
+            text-align: center;
+        }
+        
+        .consultancy-cta-stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--consultancy-teal);
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .consultancy-cta-stat-text {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .consultancy-services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .consultancy-cases-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .advisory-steps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .consultancy-value-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .consultancy-stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .consultancy-hero {
+                height: 70vh;
+            }
+            
+            .consultancy-services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .consultancy-cases-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .consultancy-stats-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .advisory-step-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <div class="navbar-section">
+        <header-component></header-component>
+    </div>
+
+    <!-- Consultancy Services Hero -->
+    <section class="consultancy-hero">
+        <div class="consultancy-hero-content">
+            <h1>Real Estate <span>Consultancy</span> Services</h1>
+            <p>Expert advisory services for strategic real estate decisions. Transform uncertainty into confidence with our professional consultancy solutions.</p>
+            <a href="contact us.html" class="btn btn-primary">Start Your Consultancy Journey</a>
+            
+            <div class="consultancy-stats-row">
+                <div class="consultancy-stat-item">
+                    <span class="consultancy-stat-number">300+</span>
+                    <span class="consultancy-stat-text">Projects Advised</span>
+                </div>
+                <div class="consultancy-stat-item">
+                    <span class="consultancy-stat-number">95%</span>
+                    <span class="consultancy-stat-text">Success Rate</span>
+                </div>
+                <div class="consultancy-stat-item">
+                    <span class="consultancy-stat-number">$500M+</span>
+                    <span class="consultancy-stat-text">Portfolio Value</span>
+                </div>
+                <div class="consultancy-stat-item">
+                    <span class="consultancy-stat-number">24+</span>
+                    <span class="consultancy-stat-text">Years Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultancy Value -->
+    <section class="section consultancy-value">
+        <div class="container">
+            <div class="consultancy-value-container">
+                <div class="consultancy-value-content animate-on-scroll">
+                    <h2>The Value of Expert Consultancy</h2>
+                    <p>Real estate decisions involve significant capital investment and long-term implications. Without proper guidance, even experienced investors can make costly mistakes that affect returns for years.</p>
+                    <p>Our consultancy services provide the expert guidance needed to navigate complex real estate decisions. We combine market intelligence, financial analysis, and strategic planning to deliver actionable recommendations.</p>
+                    <p>From individual property investments to large-scale development projects, our consultancy transforms uncertainty into confidence and maximizes the potential of every real estate opportunity.</p>
+                    
+                    <div class="consultancy-tagline">
+                        "Expert guidance transforms complex real estate decisions into profitable opportunities."
+                    </div>
+                </div>
+                <div class="consultancy-value-image animate-on-scroll">
+                    <img src="https://ewuyalhslafkrlmrpyam.supabase.co/storage/v1/object/public/rubyland/ExpertConsultancy-2.jpg" alt="Consultancy Meeting">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultancy Services -->
+    <section class="section consultancy-services">
+        <div class="container">
+            <h2 class="section-title">Our Consultancy Services</h2>
+            <div class="consultancy-services-grid">
+                <div class="consultancy-service-card animate-on-scroll">
+                    <div class="consultancy-service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <div class="consultancy-service-content">
+                        <h3>Development Advisory</h3>
+                        <p>Comprehensive guidance for property development projects from concept to completion, including feasibility analysis, design optimization, and project management oversight.</p>
+                    </div>
+                </div>
+                
+                <div class="consultancy-service-card animate-on-scroll">
+                    <div class="consultancy-service-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <div class="consultancy-service-content">
+                        <h3>Portfolio Optimization</h3>
+                        <p>Strategic analysis of existing property portfolios to identify optimization opportunities, risk mitigation strategies, and growth potential for enhanced returns.</p>
+                    </div>
+                </div>
+                
+                <div class="consultancy-service-card animate-on-scroll">
+                    <div class="consultancy-service-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="consultancy-service-content">
+                        <h3>Transaction Advisory</h3>
+                        <p>Expert support for property transactions including due diligence, negotiation strategy, contract review, and closing coordination to ensure successful outcomes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Consultancy Stats -->
+    <section class="consultancy-stats-section">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--white);">Consultancy Excellence</h2>
+            <div class="consultancy-stats-container">
+                <div class="consultancy-stat-box animate-on-scroll">
+                    <span class="consultancy-stat-box-number">300+</span>
+                    <span class="consultancy-stat-box-text">Projects Advised</span>
+                </div>
+                <div class="consultancy-stat-box animate-on-scroll">
+                    <span class="consultancy-stat-box-number">$500M+</span>
+                    <span class="consultancy-stat-box-text">Portfolio Value</span>
+                </div>
+                <div class="consultancy-stat-box animate-on-scroll">
+                    <span class="consultancy-stat-box-number">95%</span>
+                    <span class="consultancy-stat-box-text">Success Rate</span>
+                </div>
+                <div class="consultancy-stat-box animate-on-scroll">
+                    <span class="consultancy-stat-box-number">24+</span>
+                    <span class="consultancy-stat-box-text">Years Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advisory Process -->
+    <section class="section advisory-process">
+        <div class="container advisory-process-container">
+            <h2 class="section-title">Our Advisory Process</h2>
+            <div class="advisory-steps-grid">
+                <div class="advisory-step-card animate-on-scroll">
+                    <div class="advisory-step-header">
+                        <div class="advisory-step-number">1</div>
+                        <h3 class="advisory-step-title">Strategic Assessment</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>We begin with a comprehensive assessment of your investment goals, risk tolerance, and current portfolio to understand your unique needs and objectives.</p>
+                        <ul style="margin-top: 15px; padding-left: 20px;">
+                            <li>Goal Definition & Alignment</li>
+                            <li>Portfolio Analysis</li>
+                            <li>Risk Assessment</li>
+                            <li>Market Opportunity Analysis</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="advisory-step-card animate-on-scroll">
+                    <div class="advisory-step-header">
+                        <div class="advisory-step-number">2</div>
+                        <h3 class="advisory-step-title">Solution Development</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>Based on our assessment, we develop customized advisory solutions including strategic recommendations, implementation plans, and risk mitigation strategies.</p>
+                        <ul style="margin-top: 15px; padding-left: 20px;">
+                            <li>Customized Strategy Development</li>
+                            <li>Financial Modeling & Analysis</li>
+                            <li>Implementation Roadmap</li>
+                            <li>Risk Management Framework</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="advisory-step-card animate-on-scroll">
+                    <div class="advisory-step-header">
+                        <div class="advisory-step-number">3</div>
+                        <h3 class="advisory-step-title">Implementation Support</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>We provide ongoing support during implementation, including monitoring progress, adjusting strategies as needed, and ensuring alignment with your objectives.</p>
+                        <ul style="margin-top: 15px; padding-left: 20px;">
+                            <li>Ongoing Advisory Support</li>
+                            <li>Performance Monitoring</li>
+                            <li>Strategy Adjustments</li>
+                            <li>Stakeholder Coordination</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="advisory-step-card animate-on-scroll">
+                    <div class="advisory-step-header">
+                        <div class="advisory-step-number">4</div>
+                        <h3 class="advisory-step-title">Results Evaluation</h3>
+                    </div>
+                    <div class="step-content">
+                        <p>We evaluate outcomes against objectives, provide comprehensive reporting, and recommend next steps for continuous improvement and growth.</p>
+                        <ul style="margin-top: 15px; padding-left: 20px;">
+                            <li>Performance Evaluation</li>
+                            <li>Comprehensive Reporting</li>
+                            <li>Lessons Learned Analysis</li>
+                            <li>Future Strategy Development</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="consultancy-cases">
+        <div class="container consultancy-cases-container">
+            <h2 class="section-title">Consultancy Success Stories</h2>
+            <div class="consultancy-cases-grid">
+                <div class="consultancy-case-card animate-on-scroll">
+                    <div class="consultancy-case-image">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Commercial Development">
+                    </div>
+                    <div class="consultancy-case-content">
+                        <span class="consultancy-case-tag">Portfolio Optimization</span>
+                        <h3>Corporate Real Estate Portfolio</h3>
+                        <p>Advised a corporate client on restructuring their 15-property portfolio, resulting in 35% increased annual returns and improved risk profile.</p>
+                    </div>
+                </div>
+                
+                <div class="consultancy-case-card animate-on-scroll">
+                    <div class="consultancy-case-image">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Mixed-Use Development">
+                    </div>
+                    <div class="consultancy-case-content">
+                        <span class="consultancy-case-tag">Development Advisory</span>
+                        <h3>Mixed-Use Development Project</h3>
+                        <p>Provided comprehensive advisory for a $50M mixed-use development, optimizing design and phasing to increase profitability by 22%.</p>
+                    </div>
+                </div>
+                
+                <div class="consultancy-case-card animate-on-scroll">
+                    <div class="consultancy-case-image">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Investment Strategy">
+                    </div>
+                    <div class="consultancy-case-content">
+                        <span class="consultancy-case-tag">Investment Strategy</span>
+                        <h3>Institutional Investment Fund</h3>
+                        <p>Developed and implemented a real estate investment strategy for an institutional fund, achieving 18% annual returns over 5 years.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="consultancy-cta">
+        <div class="container">
+            <h2>Ready for Expert Real Estate Guidance?</h2>
+            <p>Transform your real estate decisions with our expert consultancy services. Join hundreds of clients who have achieved superior results through our strategic advisory.</p>
+            <a href="contact us.html" class="btn btn-primary" style="background: var(--consultancy-teal); border-color: var(--consultancy-teal);">Start Your Consultancy Journey</a>
+            
+            <div class="consultancy-cta-stats">
+                <div class="consultancy-cta-stat animate-on-scroll">
+                    <span class="consultancy-cta-stat-number">300+</span>
+                    <span class="consultancy-cta-stat-text">Successful Projects</span>
+                </div>
+                <div class="consultancy-cta-stat animate-on-scroll">
+                    <span class="consultancy-cta-stat-number">$500M+</span>
+                    <span class="consultancy-cta-stat-text">Portfolio Value</span>
+                </div>
+                <div class="consultancy-cta-stat animate-on-scroll">
+                    <span class="consultancy-cta-stat-number">95%</span>
+                    <span class="consultancy-cta-stat-text">Client Satisfaction</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer-component></footer-component>
+
+    <script src="Assets/js/main.js"></script>
+    <script>
+        // Consultancy Services Page Scripts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Scroll Animations
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.85 &&
+                    rect.bottom >= 0
+                );
+            }
+            
+            function handleScrollAnimation() {
+                document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                    if (isElementInViewport(el)) {
+                        el.classList.add('animated');
+                    }
+                });
+            }
+            
+            // Initial check
+            handleScrollAnimation();
+            
+            // Listen for scroll
+            window.addEventListener('scroll', handleScrollAnimation);
+            
+            // Animate stats on load
+            setTimeout(() => {
+                document.querySelectorAll('.consultancy-stat-item').forEach((stat, index) => {
+                    setTimeout(() => {
+                        stat.classList.add('animated');
+                    }, index * 200);
+                });
+            }, 500);
+            
+            // Service card animations
+            document.querySelectorAll('.consultancy-service-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    const icon = this.querySelector('.consultancy-service-icon');
+                    icon.style.transform = 'rotate(360deg) scale(1.1)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    const icon = this.querySelector('.consultancy-service-icon');
+                    icon.style.transform = 'rotate(0) scale(1)';
+                });
+            });
+            
+            // Case study card animations
+            document.querySelectorAll('.consultancy-case-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-15px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Advisory step animations
+            document.querySelectorAll('.advisory-step-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    const number = this.querySelector('.advisory-step-number');
+                    number.style.transform = 'scale(1.2) rotate(10deg)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    const number = this.querySelector('.advisory-step-number');
+                    number.style.transform = 'scale(1) rotate(0)';
+                });
+            });
+            
+            // Stat box animations
+            document.querySelectorAll('.consultancy-stat-box').forEach(box => {
+                box.addEventListener('mouseenter', function() {
+                    const number = this.querySelector('.consultancy-stat-box-number');
+                    number.style.transform = 'scale(1.1)';
+                });
+                
+                box.addEventListener('mouseleave', function() {
+                    const number = this.querySelector('.consultancy-stat-box-number');
+                    number.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

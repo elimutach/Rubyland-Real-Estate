@@ -21,6 +21,8 @@
     
     <!-- External CSS -->
     <link rel="stylesheet" href="Assets/css/main.css"/>
+    <script src="Assets/js/header.js" type="text/javascript" defer></script>
+    <script src="Assets/js/footer.js" type="text/javascript" defer></script>
     <style>
         /* ===== FEASIBILITY STUDY PAGE STYLES ===== */
         :root {
@@ -28,7 +30,7 @@
             --feasibility-light-purple: #f3e8ff;
             --feasibility-teal: #d4af37;
             --feasibility-light-teal: #e0f7fa;
-            --feasibility-orange: #ffdd35;
+            --feasibility-orange: #2f3d4d;
             --feasibility-light-orange: #fff3e0;
         }
         
@@ -61,7 +63,8 @@
         }
         
         .feasibility-hero h1 span {
-            color: #ffd700;
+            color: #cf0202;
+            box-shadow: none;
         }
         
         .hero-tagline {
@@ -120,6 +123,7 @@
         
         .problem-visual {
             position: relative;
+            width: 120%;
         }
         
         .problem-visual img {
@@ -550,7 +554,7 @@
         
         /* CTA Section */
         .feasibility-cta {
-            background: linear-gradient(135deg, var(--feasibility-purple) 0%, var(--feasibility-teal) 100%);
+            background: linear-gradient(135deg, rgb(207, 2, 2) 0%, rgb(212, 175, 55, 0.5) 100%);
             color: var(--white);
             text-align: center;
             padding: 100px 0;
@@ -693,129 +697,30 @@
 </head>
 <body>
     <!-- Header/Navigation -->
-    <div class="navbar-section">
-        <div class="contact-navbar">
-            <div class="container">
-                <div class="contact-info">
-                    <div><i class="fas fa-phone"></i> +254 700 000 000</div>
-                    <div><i class="fas fa-envelope"></i> info@rubyland.co.ke</div>
-                </div>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Main Navbar -->
-        <nav class="main-navbar">
-            <div class="container navbar-container">
-                <a href="index.html" class="logo"><img src="Assets/img/logo ONLY.png" alt="">Ruby<span>land</span></a>
-                <div class="mobile-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="dropdown">
-                        <a href="About Us.html">About Us <i class="fas fa-chevron-down"></i></a>
-                        <div class="dropdown-content">
-                            <a href="About Us.html#what-is-rubyland">Who We Are</a>
-                            <a href="About Us.html#the-team">The Team</a>
-                            <a href="About Us.html#our-story">Our Story</a>
-                            <a href="About Us.html#branches">Branches</a>
-                        </div>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#">Services <i class="fas fa-chevron-down"></i></a>
-                        <div class="dropdown-content services-dropdown">
-                            <div class="service-item">
-                                <div class="service-icon">
-                                    <i class="fas fa-home"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h4>Property Valuation</h4>
-                                    <p>Accurate property assessments for various purposes</p>
-                                </div>
-                            </div>
-                            <div class="service-item">
-                                <div class="service-icon">
-                                    <i class="fas fa-search"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h4>Feasibility Studies</h4>
-                                    <p>Comprehensive development analysis and investment blueprints</p>
-                                </div>
-                            </div>
-                            <div class="service-item">
-                                <div class="service-icon">
-                                    <i class="fas fa-file-contract"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h4>Title Deed Services</h4>
-                                    <p>Secure and verify your property ownership documents</p>
-                                </div>
-                            </div>
-                            <div class="service-item">
-                                <div class="service-icon">
-                                    <i class="fas fa-chart-line"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h4>Market Analysis</h4>
-                                    <p>Comprehensive real estate market insights</p>
-                                </div>
-                            </div>
-                            <div class="service-item">
-                                <div class="service-icon">
-                                    <i class="fas fa-handshake"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h4>Property Management</h4>
-                                    <p>Professional management of rental properties</p>
-                                </div>
-                            </div>
-                            <div class="service-item">
-                                <div class="service-icon">
-                                    <i class="fas fa-graduation-cap"></i>
-                                </div>
-                                <div class="service-info">
-                                    <h4>Training</h4>
-                                    <p>Real estate investment education and workshops</p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="listings.html">Available Listings</a></li>
-                    <li><a href="contact us.html">Contact Us</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+    <header-component></header-component>
 
     <!-- Feasibility Study Hero -->
     <section class="feasibility-hero">
         <div class="feasibility-hero-content">
             <h1>Investment <span>Blueprint</span> for Success</h1>
             <p class="hero-tagline">Professional feasibility studies that transform uncertainty into strategic advantage. Our 8-step process creates your roadmap to optimal property returns.</p>
-            <a href="#process" class="btn btn-primary" style="background: #ffd700; color: #333; border-color: #ffd700;">Explore Our 8-Step Process</a>
+            <a href="#8-step-process" class="btn btn-primary" style="background: #cf0202; color: #ffffff; border-color: #cf0202;">Explore Our 8-Step Process</a>
             
-            <div class="hero-stats-row" style="margin-top: 60px;">
+            <div class="hero-stats-row" style="margin-top: 60px; display: flex; gap: 35px; justify-content: center;">
                 <div class="hero-stat-item">
-                    <span class="hero-stat-number">$1.2M+</span>
+                    <span class="hero-stat-number" style="color: #ffd700;">$1.2M+</span>
                     <span class="hero-stat-text">Studies Conducted</span>
                 </div>
                 <div class="hero-stat-item">
-                    <span class="hero-stat-number">98%</span>
+                    <span class="hero-stat-number" style="color: #ffd700;">98%</span>
                     <span class="hero-stat-text">Success Rate</span>
                 </div>
                 <div class="hero-stat-item">
-                    <span class="hero-stat-number">8-Step</span>
+                    <span class="hero-stat-number" style="color: #ffd700;">8-Step</span>
                     <span class="hero-stat-text">Due Diligence Process</span>
                 </div>
                 <div class="hero-stat-item">
-                    <span class="hero-stat-number">24+</span>
+                    <span class="hero-stat-number" style="color: #ffd700;">24+</span>
                     <span class="hero-stat-text">Years Experience</span>
                 </div>
             </div>
@@ -838,7 +743,7 @@
                 
                 <div class="problem-visual animate-on-scroll">
                     <div class="floating-badge">Avoid Costly Mistakes</div>
-                    <img src="https://images.unsplash.com/photo-1558036117-15e82a2c9a9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Property Development Planning">
+                    <img src="https://ewuyalhslafkrlmrpyam.supabase.co/storage/v1/object/public/rubyland/PropertyDevelopmentPlanning%20(1).jpg" alt="Property Development Planning">
                 </div>
             </div>
         </div>
@@ -918,7 +823,7 @@
     </section>
 
     <!-- Detailed Process Steps -->
-    <section class="detailed-process">
+    <section id="8-step-process" class="detailed-process">
         <div class="container process-steps-container">
             <div class="process-steps-grid">
                 <!-- Step 1 -->
@@ -1159,26 +1064,26 @@
             <p class="animate-on-scroll">Don't leave your property's potential to chance. Our comprehensive feasibility study will give you the confidence to make informed investment decisions with maximum returns.</p>
             
             <div class="cta-highlight animate-on-scroll">
-                <p class="highlight-text">"A feasibility study is not an expense—it's an investment in certainty and optimal returns."</p>
+                <p class="highlight-text">"A feasibility study is not an expense it's an investment in certainty and optimal returns."</p>
             </div>
             
             <a href="contact us.html" class="btn btn-primary animate-on-scroll" style="background: #ffd700; color: #333; border-color: #ffd700; font-size: 1.1rem; padding: 16px 40px;">Start Your Feasibility Study</a>
             
-            <div class="hero-stats-row" style="margin-top: 60px;">
+            <div class="hero-stats-row" style="margin-top: 60px; display: flex; gap:30px; justify-content: center; font-weight: 400;">
                 <div class="hero-stat-item animate-on-scroll">
-                    <span class="hero-stat-number">8-Step</span>
+                    <span class="hero-stat-number" style="font-weight:600; color: #333; font-size: larger;">8-Step</span>
                     <span class="hero-stat-text">Comprehensive Process</span>
                 </div>
                 <div class="hero-stat-item animate-on-scroll">
-                    <span class="hero-stat-number">24+</span>
+                    <span class="hero-stat-number" style="font-weight:600; color: #333; font-size: larger;">24+</span>
                     <span class="hero-stat-text">Years Expertise</span>
                 </div>
                 <div class="hero-stat-item animate-on-scroll">
-                    <span class="hero-stat-number">$1.2M+</span>
+                    <span class="hero-stat-number" style="font-weight:600; color: #333; font-size: larger;">$1.2M+</span>
                     <span class="hero-stat-text">In Studies</span>
                 </div>
                 <div class="hero-stat-item animate-on-scroll">
-                    <span class="hero-stat-number">98%</span>
+                    <span class="hero-stat-number" style="font-weight:600; color: #333; font-size: larger; ">98%</span>
                     <span class="hero-stat-text">Client Satisfaction</span>
                 </div>
             </div>
@@ -1186,54 +1091,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <div class="logo">
-                        <img src="assets/img/logo ONLY.png" alt="Rubyland Limited">
-                        <span>Ruby<span>land</span><br>Limited</span>
-                    </div>
-                    <p>With over 24 years of experience, Rubyland Limited is your trusted partner for all real estate needs in Kenya. We provide expert valuation, consultation, and property services to individuals and businesses.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="About Us.html">About Us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="listings.html">Properties</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="contact us.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#">Property Valuation</a></li>
-                        <li><a href="feasibility-study.html">Feasibility Studies</a></li>
-                        <li><a href="#">Title Deed Services</a></li>
-                        <li><a href="#">Property Management</a></li>
-                        <li><a href="#">Market Analysis</a></li>
-                        <li><a href="#">Investment Training</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Office Locations</h4>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Nairobi Headquarters</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Mombasa Branch</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Kisumu Office</li>
-                        <li><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</li>
-                        <li><i class="fas fa-clock"></i> Sat: 9:00 AM - 1:00 PM</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Rubyland Limited. All Rights Reserved. | <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a></p>
-            </div>
-        </div>
-    </footer>
+    <footer-component></footer-component>
 
     <script src="Assets/js/main.js"></script>
     <script>
@@ -1359,5 +1217,6 @@
             });
         });
     </script>
+    
 </body>
 </html>

@@ -270,12 +270,26 @@
             color: var(--primary-red);
         }
 
-        .dropdown a:hover i{
-         color: #ffffff;
-         rotate: 180deg;
-         transition: 0.3s ease-in-out;
-        }
+        /* Keep dropdown open while inside */
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
 
+.dropdown:hover .fa-chevron-down {
+  color: #e1c000;
+  rotate: 180deg;
+}
+
+.dropdown:hover .dropdown-toggle-title {
+  color:var(--primary-red);
+}
+
+.dropdown:hover > a:after {
+  width: 100%;
+  background: #e1c000;
+}
         .nav-links a:after {
             content: '';
             position: absolute;
@@ -339,12 +353,13 @@
         }
 
         .services-dropdown {
-            min-width: 500px;
-            padding: 20px;
+            min-width: 550px;
+            padding: 15px;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 15px;
-            left:-80px;
+            left:-150px;
+            max-width: 650px;
         }
 
         .service-item {
@@ -359,29 +374,42 @@
         }
 
         .service-item:hover {
-            background:rgb(246, 180, 180);
+            background:rgb(255, 233, 233);
             cursor:pointer;
-            scale: 1.04;
+            scale: 1.03;
             transition: 0.3s ease-in;
+            transition-duration: 0.3s;
         }
 
         .service-icon {
-            width: 10px;
-            height: 10px;
+            width: 5px;
+            height: 5px;
             background: var(--light-red);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 16px;
             flex-shrink: 0;
-            justify-items: center;
-            align-self: center;
             color: var(--primary-red);
-            flex-shrink: 0;
             transition: 0.1s ease-in;
-            margin-left:10px;
+            margin-left:2px;
+            padding: 1.3rem ;
         }
+
+        .mynaui--math-square {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M7 15.625h3.5m3.25-5.5h3.5m-3.5-2.5h3.5m-10.5 1.25h2m0 0h2m-2 0v-2m0 2v2m5.35 6.25l1.414-1.414m0 0l1.415-1.414m-1.415 1.414L14.1 14.296m1.414 1.415l1.415 1.414M3 9.4c0-2.24 0-3.36.436-4.216a4 4 0 0 1 1.748-1.748C6.04 3 7.16 3 9.4 3h5.2c2.24 0 3.36 0 4.216.436a4 4 0 0 1 1.748 1.748C21 6.04 21 7.16 21 9.4v5.2c0 2.24 0 3.36-.436 4.216a4 4 0 0 1-1.748 1.748C17.96 21 16.84 21 14.6 21H9.4c-2.24 0-3.36 0-4.216-.436a4 4 0 0 1-1.748-1.748C3 17.96 3 16.84 3 14.6z'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
 
         .service-item:hover .service-icon i{
         color: var(--primary-red);
@@ -420,6 +448,7 @@
             cursor: pointer;
             color: var(--white);
             z-index: 1001;
+            
         }
 
         .mobile-toggle.scrolled {
@@ -610,8 +639,9 @@
         .purpose-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            gap: 90px;
             align-items: center;
+            
         }
 
         .purpose-content h2 {
@@ -627,19 +657,22 @@
 
         .purpose-image {
             border-radius: 10px;
+            width: 110%;
             overflow: hidden;
             box-shadow: var(--shadow-lg);
+            justify-self: center;
         }
 
         .purpose-image img {
             width: 100%;
             height: auto;
             display: block;
-            transition: var(--transition);
+            transition: 2s transform ease-in, 0.3s filter ease-in;
         }
 
         .purpose-image:hover img {
             transform: scale(1.03);
+            filter: grayscale(70%);
         }
 
         /* Why Choose Us Section */
@@ -682,7 +715,7 @@
         /* Process Section */
         .process-section {
             background: var(--light-gray);
-            height:270vh;
+            height:220vh;
         }
 
         .process-section .container {
@@ -968,7 +1001,7 @@
 /* LEFT PANEL */
 .safety-panel {
     position: relative;
-    background-image: url('Assets/img/building one.jpg');
+    background-image: url('https://ewuyalhslafkrlmrpyam.supabase.co/storage/v1/object/public/rubyland/building%20one.jpg');
     background-size: cover;
     background-position: center;
     padding: 60px;
@@ -1505,7 +1538,9 @@
 
         .partners-track {
             display: flex;
-            transition: transform 0.5s ease;
+            transition: transform 10.5s ease inifinite;
+            will-change: transform;
+  white-space: nowrap;
         }
 
         .partner-logo {
@@ -1533,6 +1568,31 @@
             margin-top: 40px;
             font-size: 0.9rem;
             color: var(--neutral-400);
+            
+        }
+
+        .compliance a {
+            color: var(--primary-red);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 600;
+            display:flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .compliance a i{
+            color: var(--primary-red);
+            font-size:18px;
+            text-decoration: none;
+                transition: var(--transition);
+        }
+        .compliance a span:hover {
+            text-decoration: underline;
+            color: #a73a29;
+            transition: var(--transition);
+        }
+        .compliance a span:hover i {
+            color: #ca513e;
         }
 
         /* CTA Banner */
@@ -1700,8 +1760,13 @@
         }
 
         @media (max-width: 992px) {
+            .purpose {
+                height: auto;
+            }
             .purpose-container {
                 grid-template-columns: 1fr;
+                margin-top: -30px;
+                margin-bottom:50px;
             }
             
             .metrics-grid {
@@ -1755,47 +1820,133 @@
                 top:-20px;
             }
             .nav-links {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 80%;
-                height: 100vh;
-                background: var(--white);
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                gap: 30px;
-                transition: var(--transition);
-                z-index: 1000;
-            }
-            
-            .nav-links.active {
-                right: 0;
-            }
-            
-            .nav-links a {
-                color: var(--dark-gray);
-                font-size: 18px;
-            }
+    position: fixed;
+    top: 70px;
+    right: 30px;
+    width: min(300px, 80%);
+    height: auto;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    z-index: 2000;
+    opacity: 0;
+    transform: translateY(-10px) scale(0.98);
+    pointer-events: none;
+    transition: all 0.25s ease;
+  }
+
+  .nav-links.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dark-gray);
+  }
+
+  .mobile-close {
+    position: relative;
+    top: 0px;
+    right: 5px;
+    align-self: flex-end;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: var(--primary-red);
+    cursor: pointer;
+
+    margin-bottom: -20px;
+    margin-top: 6px;
+  }
+
+  .mobile-close i {
+    pointer-events: none;
+  }
             
             .dropdown-content {
-                position: static;
-                opacity: 1;
-                visibility: visible;
-                transform: none;
-                box-shadow: none;
-                background: transparent;
-                display: none;
-            }
+    position: relative;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    padding-left: 10px;
+    display: none;
+    
+  }
+
+  .dropdown.open .dropdown-content {
+    display: block;
+    height: auto;
+     border-radius: 0;
+     border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+  .dropdown.open .nav-links a{
+    display: block;
+  }
+  .dropdown .open:focus .fa-chevron-down {
+  color: #e1c000;
+  rotate: 180deg;
+}
+
+  .dropdown > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dropdown:hover > a:after {
+  width: 0%;
+  background:none;
+}
+
+  .dropdown i {
+    font-size: 12px;
+    transition: transform 0.25s ease;
+  }
+
+  .dropdown.open i {
+    transform: rotate(180deg);
+  }
             
-            .dropdown:hover .dropdown-content {
-                display: block;
-            }
             
-            .services-dropdown {
-                min-width: 100%;
-                grid-template-columns: 1fr;
-            }
+             .services-dropdown {
+
+            min-width: 100%; 
+            grid-template-columns: 1fr;
+            
+
+  }
+
+  .service-item {
+    position: relative;
+    background: transparent;
+    padding: 20px 0;
+    border-radius: 0;
+    right:-160px;
+    top: 5px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .service-icon {
+    display: none;
+  }
+
+  .service-info h4 {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  .service-info p {
+    display: none;
+  }
             
             .hero h1 {
                 font-size: 2.5rem;
@@ -1825,6 +1976,10 @@
             .tools-grid {
                 grid-template-columns: 1fr;
             }
+
+            .process-section{
+                min-height:280vh;
+            }
             
             .knowledge-grid {
                 grid-template-columns: 1fr;
@@ -1846,6 +2001,9 @@
                 flex-direction: column;
                 gap: 15px;
             }
+
+
+
         }
 
         @media (max-width: 576px) {
