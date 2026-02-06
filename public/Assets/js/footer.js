@@ -50,7 +50,7 @@ connectedCallback(){
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Rubyland Limited. All Rights Reserved. | <a href="assets/downloads/rubyland-terms.pdf" download>Terms & Conditions</a> | <a href="#">Privacy Policy</a></p>
+                <p>&copy; 2026 Rubyland Limited. All Rights Reserved. | <a href="assets/downloads/rubyland-terms.pdf" download>Terms & Conditions</a> | <a href="#">Privacy Policy</a></p>
             </div>
         </div>
     </footer>`
