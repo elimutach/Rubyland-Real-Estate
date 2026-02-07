@@ -339,6 +339,10 @@ calendar-month::part(day) .num {
     color:rgb(172, 172, 172);
 }
 
+calendar-date calendar-month::part(day-6) {
+    font-weight: 400;
+    color:rgb(172, 172, 172);
+}
 calendar-date calendar-month::part(day-0) {
     font-weight: 400;
     color:rgb(172, 172, 172);
