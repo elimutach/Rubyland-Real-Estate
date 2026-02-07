@@ -115,9 +115,10 @@
 
 .consultation-info-side {
     position: relative;
-    height: 700px;
+    height: 900px;
     border-radius: 15px;
     overflow: hidden;
+
 }
 
 .consultation-bg-image {
@@ -578,7 +579,7 @@ button:is([aria-pressed="true"], :focus-visible){
     }
     
     .consultation-info-side {
-        height: 500px;
+        height: 800px;
     }
     
     .consultation-info-overlay {
@@ -661,7 +662,7 @@ button:is([aria-pressed="true"], :focus-visible){
     }
     
     .consultation-info-side {
-        height: 400px;
+        height: 850px;
     }
 }
 
