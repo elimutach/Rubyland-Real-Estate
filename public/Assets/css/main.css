@@ -28,7 +28,12 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
         }
+
+        :focus:not(:focus-visible) {
+  outline: none;
+}
 
         html {
             scroll-behavior: smooth;
@@ -461,6 +466,20 @@
             color: var(--white);
             z-index: 1001;
             
+        }
+
+        .mobile-toggle.scrolled:active,
+        .mobile-toggle.scrolled:focus{
+            scale: 1.03;
+            color: #666;
+
+        }
+
+        .mobile-toggle:active,
+        .mobile-toggle:focus{
+            scale: 1.03;
+            color: #666;
+
         }
 
         .mobile-toggle.scrolled {

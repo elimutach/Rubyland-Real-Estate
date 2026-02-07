@@ -20,7 +20,7 @@ class HeaderComponent extends HTMLElement {
     <!-- Main Navbar -->
     <nav class="main-navbar">
         <div class="container navbar-container">
-            <a href="#" class="logo"><img src="Assets/img/logo ONLY.png" alt="">Ruby<span>land</span></a>
+            <a href="index.html" class="logo"><img src="https://ewuyalhslafkrlmrpyam.supabase.co/storage/v1/object/public/rubyland/logo%20ONLY.png" alt="">Ruby<span>land</span></a>
             <div class="mobile-toggle">
                 <i class="fas fa-bars"></i>
             </div>
@@ -188,3 +188,24 @@ if (mobileClose) {
     document.querySelectorAll('.dropdown.open').forEach(d => d.classList.remove('open'));
   });
 });*/
+
+document.addEventListener('click', function (e) {
+  const navLinks = document.querySelector('.nav-links');
+  const mobileToggle = document.querySelector('.mobile-toggle');
+
+  if (!navLinks || !mobileToggle) return;
+
+  const isClickInsideNav = navLinks.contains(e.target);
+  const isClickOnToggle = mobileToggle.contains(e.target);
+
+  // If click is outside nav + not on hamburger
+  if (!isClickInsideNav && !isClickOnToggle) {
+    // Close mobile menu
+    navLinks.classList.remove('active');
+
+    // Close all dropdowns
+    document.querySelectorAll('.dropdown.open').forEach(dropdown => {
+      dropdown.classList.remove('open');
+    });
+  }
+});

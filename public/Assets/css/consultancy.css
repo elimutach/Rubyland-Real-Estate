@@ -1,0 +1,677 @@
+/* consultancy.css - Based on contact.css with consultation-specific styles */
+
+.consultancy-hero {
+    height: 70vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    margin-top: 0px;
+}
+
+.consultancy-hero-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.consultancy-hero h1 {
+    font-size: clamp(36px, 5vw, 56px);
+    margin-bottom: 20px;
+    color: var(--white);
+}
+
+.consultancy-hero p {
+    font-size: 1.2rem;
+    color: var(--neutral-600);
+}
+
+/* Why Consult Section */
+.why-consult {
+    background: var(--light-gray);
+    padding: 100px 0;
+}
+
+.consult-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 40px 20px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-red);
+    margin-bottom: 10px;
+}
+
+.stat-text {
+    font-size: 1.1rem;
+    color: var(--dark-gray);
+}
+
+.consult-benefits {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.benefit-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.benefit-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--light-red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--primary-red);
+    font-size: 24px;
+}
+
+/* Consultation Form Section */
+.consultation-form-section {
+    padding: 100px 0;
+    background: var(--white);
+    display: flex;
+}
+
+.consultation-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.consultation-info-side {
+    position: relative;
+    height: 700px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.consultation-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.consultation-info-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.95) 70%,
+        transparent 120%
+    );
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.consultation-details h3 {
+    color: var(--primary-red);
+    margin-bottom: 30px;
+}
+
+.consultation-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.consultation-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--light-red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-red);
+    flex-shrink: 0;
+}
+
+.consultation-text h4 {
+    margin-bottom: 5px;
+    color: var(--dark-gray);
+}
+
+.consultation-text p {
+    color: var(--neutral-400);
+    margin-bottom: 5px;
+}
+
+.consultation-hours {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 1px solid var(--neutral-700);
+}
+
+/* Form Styles - Consultation Specific */
+.consultation-form {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-lg);
+}
+
+.form-title {
+    color: var(--primary-red);
+    margin-bottom: 10px;
+}
+
+.consultation-form > p {
+    color: var(--neutral-500);
+    margin-bottom: 30px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--neutral-700);
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-red);
+    box-shadow: 0 0 0 3px rgba(207, 2, 2, 0.1);
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Date Picker Styles */
+.date-picker-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.date-picker-button {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--neutral-700);
+    border-radius: 5px;
+    background: var(--white);
+    color: var(--dark-gray);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: var(--transition);
+}
+
+.date-picker-button:hover {
+    border-color: var(--primary-red);
+    background: var(--neutral-900);
+}
+
+.cally-popover {
+    position: absolute;
+    top: calc(100% + 8px); /* below button */
+    left: 0;
+
+    background: var(--white);
+    border: 1px solid var(--neutral-700);
+    box-shadow: var(--shadow-lg);
+    border-radius: 20px;
+    padding: 10px;
+
+    z-index: 30;
+
+    opacity: 0;
+    transform: translateY(-6px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.cally-popover.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.cally svg {
+    fill: var(--primary-red);
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    outline: none;
+}
+
+.cally svg:hover {
+    fill: #000000;
+    transform: scale(1.1);
+}
+
+.cally button:focus-visible svg {
+    outline: 2px solid var(--primary-red);
+    outline-offset: 2px;
+}
+
+/* Navigation buttons */
+calendar-date::part(previous),
+calendar-date::part(next) {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+/* SVG icons inside buttons */
+calendar-date::part(previous-icon),
+calendar-date::part(next-icon) {
+    fill: red;
+}
+
+/* Calendar day buttons */
+calendar-month::part(day) {
+    font-weight: 600;
+
+    border-radius: 20px;
+}
+
+calendar-month::part(day) .num {
+    font-weight: 300;
+    color:rgb(172, 172, 172);
+}
+
+calendar-date calendar-month::part(day-0) {
+    font-weight: 400;
+    color:rgb(172, 172, 172);
+}
+calendar-date calendar-month {
+  --color-accent:var(--primary-red);
+  --color-text-on-accent: white;
+}
+/* Selected day */
+button:is([aria-pressed="true"], :focus-visible){
+    background: red;
+    color: white;
+    font-weight: 800;
+    border-radius: 20px;
+}
+
+
+/* Gender Options */
+.gender-options {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.gender-option .checkbox-tile {
+    width: 100px;
+    min-height: 80px;
+}
+
+.gender-option .checkbox-icon {
+    font-size: 24px;
+}
+
+/* Consultation Testimonials */
+.consultation-testimonials {
+    background: var(--light-gray);
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.testimonials-container {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.testimonials-track {
+    display: flex;
+    gap: 30px;
+    animation: scrollTestimonials 500s linear infinite;
+    width: max-content;
+}
+
+.testimonial-item {
+    flex: 0 0 650px;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+}
+
+.testimonial-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.client-info h4 {
+    margin-bottom: 5px;
+    color: var(--primary-red);
+}
+
+.client-role {
+    color: var(--neutral-500);
+    font-size: 14px;
+}
+
+.stars {
+    color: #ffc107;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: var(--neutral-400);
+}
+
+@keyframes scrollTestimonials {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.testimonials-track:hover {
+    animation-play-state: paused;
+}
+
+/* FAQs Section */
+.faq-section {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.faq-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.faq-column h3 {
+    color: var(--primary-red);
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border: 1px solid var(--neutral-800);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.faq-question {
+    padding: 20px;
+    background: var(--light-gray);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: var(--dark-gray);
+    transition: var(--transition);
+}
+
+.faq-question:hover {
+    background: var(--neutral-900);
+}
+
+.faq-question.active {
+    background: var(--primary-red);
+    color: var(--white);
+}
+
+.faq-icon {
+    transition: var(--transition);
+}
+
+.faq-question.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.faq-answer.show {
+    padding: 20px;
+    max-height: 500px;
+}
+
+.faq-answer p {
+    margin-bottom: 0;
+    color: var(--neutral-400);
+}
+
+/* Form Status */
+.form-status {
+    position: fixed;               /* Toast behavior */
+    top: 80px;                      /* Change to bottom if you want */
+    right: 35px;
+    max-width: 320px;
+    padding: 14px 18px;
+    border-radius: 8px;
+
+    background: #1f2933;            /* Dark neutral */
+    color: #fff;
+    font-size: 14px;
+    line-height: 1.4;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Visible state */
+.form-status.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.form-status.success {
+    background: #d4edda;
+    color: #155724;
+    display: block;
+}
+
+.form-status.error {
+    background: #ffc3c8;
+    color: #721c24;
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .consult-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .main-navbar.scrolled {
+        top:-10px;
+    }
+}
+
+@media (max-width: 992px) {
+    .main-navbar.scrolled {
+        margin-top:10px;
+    }
+    
+    .consultation-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .consultation-info-side {
+        height: 500px;
+    }
+    
+    .consultation-info-overlay {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 30px;
+    }
+    
+    .faq-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-item {
+        flex: 0 0 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-navbar.scrolled {
+     top: -10px;
+    }
+    
+    .consultation-form-section {
+        padding: 60px 0;
+    }
+    
+    .consult-stats {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .consult-benefits {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-group.full-width {
+        grid-column: span 1;
+    }
+    
+    .gender-options {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .gender-option .checkbox-tile {
+        width: 100%;
+    }
+    
+    .testimonial-item {
+        flex: 0 0 350px;
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-container .logo{
+        color:var(--dark-gray);
+    }
+    .main-navbar.scrolled {
+        top: -10px;
+    }
+    
+    .consultancy-hero {
+        height: 50vh;
+        margin-top: 80px;
+    }
+    
+    .consultancy-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .consultation-form {
+        padding: 20px;
+    }
+    
+    .consultation-info-overlay {
+        padding: 20px;
+    }
+    
+    .consultation-info-side {
+        height: 400px;
+    }
+}
+
+@media (max-width: 390px) {
+    .consult-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonial-item {
+        flex: 0 0 300px;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <title>Book Consultation | Rubyland Limited</title>
+    <meta name="description" content="Book a professional real estate consultation with Rubyland Limited. Expert advice on property investment, valuation, and market analysis in Kenya.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo ONLY.png">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="Assets/css/main.css">
+    <link rel="stylesheet" href="Assets/css/consultancy.css">
+    
+    <!-- Cally Calendar Component -->
+    <script type="module" src="https://unpkg.com/cally"></script>
+    
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="Assets/js/header.js" type="text/javascript" defer></script>
+    <script src="Assets/js/footer.js" type="text/javascript" defer></script>
+    <script type="text/javascript">
+        emailjs.init('ZSlUX3HD3vo75GT0X'); // Replace with your EmailJS public key
+    </script>
+
+</head>
+<body>
+
+    <!-- Header -->
+    <header-component></header-component>
+
+    <!-- Section 1: Hero Section -->
+    <section class="consultancy-hero">
+        <div class="consultancy-hero-content">
+            <h1>Book a Professional Consultation</h1>
+            <p>Get expert real estate advice tailored to your specific needs and investment goals</p>
+        </div>
+    </section>
+
+    <!-- Section 2: Why Book Consultation -->
+    <section class="section why-consult">
+        <div class="container">
+            <h2 class="section-title">Why Book a Rubyland Consultation?</h2>
+            
+            <div class="consult-stats">
+                <div class="stat-card">
+                    <div class="stat-number" data-target="99" data-suffix="%">0</div>
+                    <div class="stat-text">Client Satisfaction Rate</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="500" data-suffix="+">0</div>
+                    <div class="stat-text">Consultations This Year</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="24" data-suffix="+">0</div>
+                    <div class="stat-text">Years Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-target="50" data-suffix="+">0</div>
+                    <div class="stat-text">Expert Consultants</div>
+                </div>
+            </div>
+
+            <div class="consult-benefits">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Market Analysis</h3>
+                    <p>Get current market insights and trends to make informed investment decisions based on data-driven analysis.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Personalized Strategy</h3>
+                    <p>Receive customized investment strategies based on your financial goals, risk tolerance, and timeline.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Legal Guidance</h3>
+                    <p>Navigate complex real estate laws and regulations with expert legal consultation and compliance advice.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3>Due Diligence</h3>
+                    <p>Learn how to conduct thorough property verification and avoid common real estate pitfalls and fraud.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Consultation Booking Form -->
+    <section class="consultation-form-section">
+        <div class="container consultation-container">
+            <!-- Left Column: Consultation Info -->
+            <div class="consultation-info-side">
+                <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                     alt="Rubyland Consultation" class="consultation-bg-image" loading="lazy">
+                <div class="consultation-info-overlay">
+                    <div class="consultation-details">
+                        <h3>Consultation Details</h3>
+                        
+                        <div class="consultation-item">
+                            <div class="consultation-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="consultation-text">
+                                <h4>Duration</h4>
+                                <p>Initial consultation: 60-90 minutes</p>
+                                <p>Follow-up sessions: 30-45 minutes</p>
+                            </div>
+                        </div>
+                        
+                        <div class="consultation-item">
+                            <div class="consultation-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <div class="consultation-text">
+                                <h4>Format Options</h4>
+                                <p>In-person at our offices</p>
+                                <p>Virtual via Zoom/Teams</p>
+                                <p>Phone consultation</p>
+                            </div>
+                        </div>
+                        
+                        <div class="consultation-item">
+                            <div class="consultation-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <div class="consultation-text">
+                                <h4>Investment</h4>
+                                <p>Free 30-min discovery call</p>
+                                <p>Paid consultations start from KSh 5,000</p>
+                                <p>Corporate rates available</p>
+                            </div>
+                        </div>
+                        
+                        <div class="consultation-item">
+                            <div class="consultation-icon">
+                                <i class="fas fa-file-alt"></i>
+                            </div>
+                            <div class="consultation-text">
+                                <h4>What to Bring</h4>
+                                <p>Property documents (if any)</p>
+                                <p>Investment budget range</p>
+                                <p>List of questions/concerns</p>
+                            </div>
+                        </div>
+                        
+                        <div class="consultation-hours">
+                            <h4>Available Time Slots</h4>
+                            <ul class="hours-list">
+                                <li><span>Monday - Friday:</span> <span>9:00 AM - 4:00 PM</span></li>
+                                <li><span>Saturday:</span> <span>10:00 AM - 2:00 PM</span></li>
+                                <li><span>Evening slots:</span> <span>By special arrangement</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Consultation Form -->
+            <div class="consultation-form">
+                <h2 class="form-title">Book Your Consultation</h2>
+                <p>Complete the form and we'll confirm your appointment within 2 business hours.</p>
+                
+                <form id="consultationForm">
+                    <div id="formStatus" class="form-status"></div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="firstName" class="form-label">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="lastName" class="form-label">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="country" class="form-label">Country *</label>
+                            <select id="country" name="country" class="form-control" required>
+                                <option value="">Select Country</option>
+                                <option value="Kenya">Kenya</option>
+                                <option value="Tanzania">Tanzania</option>
+                                <option value="Uganda">Uganda</option>
+                                <option value="Rwanda">Rwanda</option>
+                                <option value="Ethiopia">Ethiopia</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="county" class="form-label">County / State *</label>
+                            <input type="text" id="county" name="county" class="form-control" required placeholder="e.g., Nairobi, Mombasa">
+                        </div>
+                    </div>
+                    
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="branch" class="form-label">Preferred Branch *</label>
+                            <select id="branch" name="branch" class="form-control" required>
+                                <option value="">Select Branch</option>
+                                <option value="Nairobi (Westlands)">Nairobi (Westlands) - Main Office</option>
+                                <option value="Nairobi (Karen)">Nairobi (Karen) Branch</option>
+                                <option value="Mombasa">Mombasa Branch</option>
+                                <option value="Kisumu">Kisumu Branch</option>
+                                <option value="Virtual">Virtual Consultation</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="gender" class="form-label">Gender</label>
+                            <div class="gender-options">
+                                <div class="checkbox-wrapper-16 gender-option">
+                                    <label class="checkbox-wrapper">
+                                        <input class="checkbox-input" type="radio" name="gender" value="male">
+                                        <span class="checkbox-tile gender-tile">
+                                            <span class="checkbox-icon">
+                                                <i class="ti ti-gender-male"></i>
+                                            </span>
+                                            <span class="checkbox-label">Male</span>
+                                        </span>
+                                    </label>
+                                </div>
+                                <div class="checkbox-wrapper-16 gender-option">
+                                    <label class="checkbox-wrapper">
+                                        <input class="checkbox-input" type="radio" name="gender" value="female">
+                                        <span class="checkbox-tile gender-tile">
+                                            <span class="checkbox-icon">
+                                                <i class="ti ti-gender-female"></i>
+                                            </span>
+                                            <span class="checkbox-label">Female</span>
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+  <label class="form-label">Preferred Consultation Date *</label>
+
+  <div class="date-picker-container">
+    <button type="button" class="date-picker-button" id="cally1">
+      <i class="fas fa-calendar-alt"></i> Select Date
+    </button>
+
+    <div id="cally-popover1" class="cally-popover">
+      <calendar-date class="cally">
+        <svg slot="previous" class="previous bg-transparent border-none" style="border:none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M15.75 19.5 8.25 12l7.5-7.5"></path>
+        </svg>
+        <svg slot="next" class="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="m8.25 4.5 7.5 7.5-7.5 7.5"></path>
+        </svg>
+        <calendar-month class="cally-month"></calendar-month>
+      </calendar-date>
+    </div>
+
+    <input type="hidden" id="consultationDate" name="Consultation-Date" required>
+  </div>
+</div>
+
+
+                    
+                    <div class="form-group">
+                        <label for="topic" class="form-label">Topic of Consultation *</label>
+                        <select id="topic" name="topic" class="form-control" required onchange="toggleOtherTopic(this)">
+                            <option value="">Select consultation topic</option>
+                            <option value="Real Estate Valuation">Real Estate Valuation</option>
+                            <option value="Property Managment & Sales">Property Managment & Sales</option>
+                            <option value="Investment Advice">Investment Advice</option>
+                            <option value="Feasibility Study">Feasibility Study</option>
+                            <option value="Legal Consultation">Legal Consultation</option>
+                            <option value="Market Analysis">Market Analysis</option>
+                            <option value="Portfolio Review">Portfolio Review</option>
+                            <option value="Training & Workshops">Training & Workshops</option>
+                            <option value="Other">Other (please specify)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" id="otherTopicContainer" style="display: none;">
+                        <label for="otherTopic" class="form-label">Please specify your consultation topic *</label>
+                        <input type="text" id="otherTopic" name="otherTopic" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="comments" class="form-label">Additional Comments</label>
+                        <textarea id="comments" name="comments" class="form-control" placeholder="Any specific questions or details you'd like to discuss during the consultation..." rows="4"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px;">
+                        <span id="submitText">Book Consultation</span>
+                        <span id="loadingSpinner" style="display: none;">
+                            <i class="fas fa-spinner fa-spin"></i> Processing...
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Consultation FAQs -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Consultation FAQs</h2>
+            <div class="faq-container">
+                <div class="faq-column">
+                    <h3>Booking & Preparation</h3>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question active">
+                            How do I prepare for my consultation?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer show">
+                            <p>We recommend: 1) Gather any property documents you have, 2) Define your investment goals and budget, 3) Prepare a list of specific questions, 4) Have your identification documents ready, 5) Think about your preferred timeline for investment or decision-making.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What is your cancellation/rescheduling policy?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We require 24 hours notice for cancellations or rescheduling. You can reschedule through the confirmation email link or by calling our office. Late cancellations (less than 24 hours) may incur a fee of 50% of the consultation cost.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do you offer emergency consultation slots?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we offer emergency consultation slots for time-sensitive property decisions. These are subject to consultant availability and may incur a 20% premium. Contact our emergency line at +254 720 000 000 for immediate assistance.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can I bring someone with me to the consultation?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Absolutely! We encourage bringing partners, family members, or business associates who are involved in the decision-making process. Please let us know in advance if more than 2 additional people will be attending.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What happens after I book my consultation?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You'll receive: 1) Confirmation email with date/time details, 2) Pre-consultation questionnaire (optional), 3) Meeting link or location details, 4) Consultant profile, 5) List of documents to bring. We'll also send a reminder 24 hours before your appointment.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-column">
+                    <h3>Consultation Process</h3>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What is included in a paid consultation?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Our paid consultations include: 1) One-on-one session with an expert consultant, 2) Customized property analysis, 3) Market insights relevant to your needs, 4) Actionable recommendations, 5) Follow-up summary email, 6) 30-day email support for clarification questions.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How are consultants assigned to clients?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We match you with a consultant based on: 1) Your specific consultation topic, 2) Geographic location of your property interest, 3) Consultant specialization and expertise, 4) Language preferences, 5) Your preferred consultation format (in-person/virtual).</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Do you provide consultation reports or documentation?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, all paid consultations include a summary report emailed within 48 hours. Comprehensive written reports with detailed analysis are available as an add-on service. Sample reports are available upon request before booking.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Can I record the consultation session?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Audio recording of virtual consultations is permitted with prior notification to your consultant. Video recording requires written consent. All recordings are for personal use only and may not be distributed or published. We do not provide recording services.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            What if I need follow-up consultations?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Follow-up consultations are available at a discounted rate (20% off standard fee). Package deals for multiple sessions are also offered. Your initial consultant will remain your primary contact for continuity, unless you request a specialist in a different area.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Testimonials -->
+    <section class="consultation-testimonials">
+        <div class="container">
+            <h2 class="section-title">Client Consultation Experiences</h2>
+            <div class="testimonials-container">
+                <div class="testimonials-track">
+                    <!-- Testimonial items -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-header">
+                            <div class="client-info">
+                                <h4>Dr. Amina Hassan</h4>
+                                <p class="client-role">Medical Professional</p>
+                            </div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"The investment consultation helped me diversify my portfolio. The consultant took time to understand my risk profile and recommended perfect properties matching my goals."</p>
+                    </div>
+                    
+                    <div class="testimonial-item">
+                        <div class="testimonial-header">
+                            <div class="client-info">
+                                <h4>Robert Kamau</h4>
+                                <p class="client-role">Diaspora Investor</p>
+                            </div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Virtual consultation from the UK was seamless. Rubyland handled everything remotely - from due diligence to final purchase. Exceptional service for overseas investors."</p>
+                    </div>
+                    
+                    <div class="testimonial-item">
+                        <div class="testimonial-header">
+                            <div class="client-info">
+                                <h4>Sarah Njeri</h4>
+                                <p class="client-role">First-time Buyer</p>
+                            </div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"The free discovery call helped me understand what I needed. The paid consultation gave me confidence to make my first property purchase. Worth every shilling!"</p>
+                    </div>
+                    
+                    <div class="testimonial-item">
+                        <div class="testimonial-header">
+                            <div class="client-info">
+                                <h4>James Omondi</h4>
+                                <p class="client-role">Business Owner</p>
+                            </div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Corporate consultation for our company's property expansion was comprehensive. The feasibility study saved us from a poor investment decision."</p>
+                    </div>
+                    
+                    <!-- Duplicate items for seamless scroll -->
+                    <div class="testimonial-item">
+                        <div class="testimonial-header">
+                            <div class="client-info">
+                                <h4>Dr. Amina Hassan</h4>
+                                <p class="client-role">Medical Professional</p>
+                            </div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"The investment consultation helped me diversify my portfolio. The consultant took time to understand my risk profile and recommended perfect properties matching my goals."</p>
+                    </div>
+                    
+                    <div class="testimonial-item">
+                        <div class="testimonial-header">
+                            <div class="client-info">
+                                <h4>Robert Kamau</h4>
+                                <p class="client-role">Diaspora Investor</p>
+                            </div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Virtual consultation from the UK was seamless. Rubyland handled everything remotely - from due diligence to final purchase. Exceptional service for overseas investors."</p>
+                    </div>
+                    
+                    <div class="testimonial-item">
+                        <div class="testimonial-header">
+                            <div class="client-info">
+                                <h4>Sarah Njeri</h4>
+                                <p class="client-role">First-time Buyer</p>
+                            </div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"The free discovery call helped me understand what I needed. The paid consultation gave me confidence to make my first property purchase. Worth every shilling!"</p>
+                    </div>
+                    
+                    <div class="testimonial-item">
+                        <div class="testimonial-header">
+                            <div class="client-info">
+                                <h4>James Omondi</h4>
+                                <p class="client-role">Business Owner</p>
+                            </div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                        <p class="testimonial-text">"Corporate consultation for our company's property expansion was comprehensive. The feasibility study saved us from a poor investment decision."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="form-status"></div>
+
+    <!-- Section 6: Footer -->
+    <footer-component></footer-component>
+
+    <script src="Assets/js/main.js"></script>
+    <script src="Assets/js/consultancy.js"></script>
+</body>
+</html>
