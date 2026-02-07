@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // 0 = Sunday, 6 = Saturday
                 if (day === 0 || day === 6) {
-                    showToast("Weekend dates are not available for consultations. Please select a weekday.", "error");
+                    showToast("Weekend dates are not available for consultations. Please select a weekday or contact support.", "error");
                     datePicker.value = '';
                     document.getElementById('cally1').innerHTML = '<i class="fas fa-calendar-alt"></i> Select Date';
                     document.getElementById('consultationDate').value = '';
@@ -275,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
       hiddenInput.value = '';
       button.innerHTML = '<i class="fas fa-calendar-alt"></i> Select Date';
       popover.classList.remove('active');
-      showToast("Weekend dates are not available for consultations. Please select a weekday.", "error");
+      showToast("Weekend dates are not available for consultations. Please select a weekday or contact support.", "error");
                     formStatus.style.display = 'block';
       calendar.value = '';
 
