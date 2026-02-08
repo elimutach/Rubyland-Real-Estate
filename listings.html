@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Properties | Rubyland Real Estate</title>
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Our listings CSS (we'll create this next) -->
+    <link rel="stylesheet" href="listings.css">
+    
+    <style>
+        /* Temporary basic styles just to see structure */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Hero Section -->
+    <div class="back-link-container">
+    <a href="home.html" class="back-link">
+        <i class="fas fa-arrow-left"></i> Back to Home
+    </a>
+</div>
+
+<section class="hero-section">
+    <div class="hero-content">
+        <h1 class="hero-title">Rubyland <span>Available Listings</span></h1>
+        <h2 class="hero-subtitle">Find Your Perfect Property</h2>
+        <p class="hero-subtitle">Browse through our exclusive collection of available properties</p>
+    </div>
+</section>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Property Filter Section -->
+            <section class="filter-section">
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All</button>
+                    <button class="filter-tab" data-filter="residential">Residential</button>
+                    <button class="filter-tab" data-filter="commercial">Commercial</button>
+                    <button class="filter-tab" data-filter="land">Land</button>
+                    <button class="filter-tab" data-filter="luxury">Luxury</button>
+                </div>
+                
+                <div class="search-sort-bar">
+                    <div class="search-box">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Search properties by location, type, or features...">
+                    </div>
+                    
+                    <div class="sort-options">
+                        <label for="sort-select" class="sort-label">Sort by:</label>
+                        <select id="sort-select" class="sort-select">
+                            <option value="newest">Newest First</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="bedrooms">Most Bedrooms</option>
+                            <option value="size">Largest First</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Properties Grid -->
+            <section class="properties-grid">
+                <!-- Property Card 1 - Westlands Apartment -->
+                <article class="property-card" data-type="residential" data-price="25000000">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1565953522043-baea26b83b7e?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                             alt="Modern apartment in Westlands">
+                        
+                        <div class="property-badges">
+                            <span class="badge sale-badge">For Sale</span>
+                            <span class="badge featured-badge">Featured</span>
+                        </div>
+                        
+                        <div class="property-date">
+                            <i class="far fa-calendar"></i> Uploaded: 2nd Dec 2024
+                        </div>
+                    </div>
+                    
+                    <div class="property-info">
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Westlands, Nairobi</span>
+                        </div>
+                        
+                        <h3 class="property-title">Westlands Serviced Apartment</h3>
+                        
+                        <div class="property-price">
+                            <span class="price-amount">KSh 25,000,000</span>
+                        </div>
+                        
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>3 Bedrooms</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>2 Bathrooms</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-expand"></i>
+                                <span>2,200 sqft</span>
+                            </div>
+                        </div>
+                        
+                        <p class="property-description">
+                            Luxurious serviced apartment in the heart of Westlands with modern amenities, 
+                            stunning city views, and 24/7 security. Perfect for professionals.
+                        </p>
+                        
+                        <div class="property-actions">
+                            <button class="btn btn-details">
+                                <i class="far fa-eye"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Property Card 2 - Karen Villa -->
+                <article class="property-card" data-type="luxury" data-price="85000000">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Luxury villa in Karen">
+                        
+                        <div class="property-badges">
+                            <span class="badge sale-badge">For Sale</span>
+                            <span class="badge featured-badge">Featured</span>
+                        </div>
+                        
+                        <div class="property-date">
+                            <i class="far fa-calendar"></i> Uploaded: 15th Nov 2024
+                        </div>
+                    </div>
+                    
+                    <div class="property-info">
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Karen, Nairobi</span>
+                        </div>
+                        
+                        <h3 class="property-title">Karen Luxury Villa</h3>
+                        
+                        <div class="property-price">
+                            <span class="price-amount">KSh 85,000,000</span>
+                        </div>
+                        
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>5 Bedrooms</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>4 Bathrooms</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-expand"></i>
+                                <span>6,500 sqft</span>
+                            </div>
+                        </div>
+                        
+                        <p class="property-description">
+                            Exclusive villa featuring expansive gardens, swimming pool, gym, 
+                            and premium finishes throughout. Set on 2 acres of lush greenery.
+                        </p>
+                        
+                        <div class="property-actions">
+                            <button class="btn btn-details">
+                                <i class="far fa-eye"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Property Card 3 - Runda House -->
+                <article class="property-card" data-type="residential" data-price="45000000">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Spacious house in Runda">
+                        
+                        <div class="property-badges">
+                            <span class="badge sale-badge">For Sale</span>
+                        </div>
+                        
+                        <div class="property-date">
+                            <i class="far fa-calendar"></i> Uploaded: 5th Jan 2025
+                        </div>
+                    </div>
+                    
+                    <div class="property-info">
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Runda, Nairobi</span>
+                        </div>
+                        
+                        <h3 class="property-title">Runda Family House</h3>
+                        
+                        <div class="property-price">
+                            <span class="price-amount">KSh 45,000,000</span>
+                        </div>
+                        
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>4 Bedrooms</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>3 Bathrooms</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-expand"></i>
+                                <span>3,800 sqft</span>
+                            </div>
+                        </div>
+                        
+                        <p class="property-description">
+                            Beautiful family home in secure Runda estate. Features include 
+                            master ensuite, spacious living areas, and a large garden perfect for families.
+                        </p>
+                        
+                        <div class="property-actions">
+                            <button class="btn btn-details">
+                                <i class="far fa-eye"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Property Card 4 - Commercial Space -->
+                <article class="property-card" data-type="commercial" data-price="120000000">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Commercial office space">
+                        
+                        <div class="property-badges">
+                            <span class="badge sale-badge">For Sale</span>
+                            <span class="badge featured-badge">Featured</span>
+                        </div>
+                        
+                        <div class="property-date">
+                            <i class="far fa-calendar"></i> Uploaded: 20th Dec 2024
+                        </div>
+                    </div>
+                    
+                    <div class="property-info">
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>CBD, Nairobi</span>
+                        </div>
+                        
+                        <h3 class="property-title">CBD Office Space</h3>
+                        
+                        <div class="property-price">
+                            <span class="price-amount">KSh 120,000,000</span>
+                        </div>
+                        
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-building"></i>
+                                <span>Office Space</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-expand"></i>
+                                <span>8,000 sqft</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-car"></i>
+                                <span>Parking: 20 slots</span>
+                            </div>
+                        </div>
+                        
+                        <p class="property-description">
+                            Prime office space in Nairobi CBD. Fully furnished, 
+                            with conference rooms, high-speed internet, and 24/7 security. 
+                            Ideal for corporate headquarters.
+                        </p>
+                        
+                        <div class="property-actions">
+                            <button class="btn btn-details">
+                                <i class="far fa-eye"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Property Card 5 - Land Plot -->
+                <article class="property-card" data-type="land" data-price="15000000">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Land plot in Kiambu">
+                        
+                        <div class="property-badges">
+                            <span class="badge sale-badge">For Sale</span>
+                        </div>
+                        
+                        <div class="property-date">
+                            <i class="far fa-calendar"></i> Uploaded: 10th Jan 2025
+                        </div>
+                    </div>
+                    
+                    <div class="property-info">
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kiambu Road, Nairobi</span>
+                        </div>
+                        
+                        <h3 class="property-title">1-Acre Land Plot</h3>
+                        
+                        <div class="property-price">
+                            <span class="price-amount">KSh 15,000,000</span>
+                        </div>
+                        
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-ruler-combined"></i>
+                                <span>1 Acre</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-road"></i>
+                                <span>Road Access</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-tint"></i>
+                                <span>Water Available</span>
+                            </div>
+                        </div>
+                        
+                        <p class="property-description">
+                            Prime 1-acre plot along Kiambu Road. Fully surveyed with title deed, 
+                            electricity connection available, and approved for residential development.
+                        </p>
+                        
+                        <div class="property-actions">
+                            <button class="btn btn-details">
+                                <i class="far fa-eye"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Property Card 6 - Kilimani Apartment -->
+                <article class="property-card" data-type="residential" data-price="18500000">
+                    <div class="property-image">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Apartment in Kilimani">
+                        
+                        <div class="property-badges">
+                            <span class="badge sale-badge">For Sale</span>
+                        </div>
+                        
+                        <div class="property-date">
+                            <i class="far fa-calendar"></i> Uploaded: 8th Jan 2025
+                        </div>
+                    </div>
+                    
+                    <div class="property-info">
+                        <div class="property-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kilimani, Nairobi</span>
+                        </div>
+                        
+                        <h3 class="property-title">Kilimani 2-Bedroom Apartment</h3>
+                        
+                        <div class="property-price">
+                            <span class="price-amount">KSh 18,500,000</span>
+                        </div>
+                        
+                        <div class="property-features">
+                            <div class="feature">
+                                <i class="fas fa-bed"></i>
+                                <span>2 Bedrooms</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-bath"></i>
+                                <span>2 Bathrooms</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-expand"></i>
+                                <span>1,500 sqft</span>
+                            </div>
+                        </div>
+                        
+                        <p class="property-description">
+                            Modern apartment in Kilimani with balcony, fitted kitchen, 
+                            and en-suite master bedroom. Located close to shops and restaurants.
+                        </p>
+                        
+                        <div class="property-actions">
+                            <button class="btn btn-details">
+                                <i class="far fa-eye"></i> View Details
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <span class="page-dots">...</span>
+                <button class="page-btn">8</button>
+                <button class="page-btn next-btn">
+                    Next <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 class="footer-title">Rubyland Real Estate</h3>
+                    <p class="footer-description">
+                        Your trusted partner in finding the perfect property in Kenya.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Contact Information</h4>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-phone contact-icon"></i>
+                            <span>+254 700 000 000</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope contact-icon"></i>
+                            <span>info@rubyland.co.ke</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt contact-icon"></i>
+                            <span>Nairobi, Kenya</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-subtitle">Quick Links</h4>
+                    <ul class="quick-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Our Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">
+                    &copy; 2025 Rubyland Limited. All Rights Reserved. | Terms & Conditions | Privacy Policy
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- No JavaScript for now - just structure -->
+</body>
+</html>
