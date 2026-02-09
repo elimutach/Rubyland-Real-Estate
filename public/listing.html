@@ -6,6 +6,7 @@
     <title>Page Not Found | Rubyland Limited</title>
     <link rel="stylesheet" href="Assets/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="Assets/js/footer.js" type="text/javascript" defer></script>
     <style>
         /* Additional styles for 404 page */
         .error-page {
@@ -143,8 +144,33 @@
         }
 
         @media (max-width: 768px) {
+            .error-page {
+                background-color:var(--white);
+            }
+            .error-grid{
+            grid-template-columns: 1fr;
+            gap:0px;
+            }
+            .error-content {
+                order: 2;
+                text-align: center;
+            }
+            .error-code{
+                font-size:96px;
+            }
+            .error-title {
+                font-size:36px;
+            }
+
+            .error-svg svg{
+            max-width: 300px;
+            height: auto;
+        }
             .error-container {
-                padding: 40px 20px;
+                background-color:transparent; 
+                box-shadow: none;
+                padding: 40px 0px;
+                max-width: 1500px;
             }
             
             .error-actions {
@@ -307,9 +333,9 @@
                     <div class="nav-links-grid">
                         <a href="index.html">Home</a>
                         <a href="About Us.html">About Us</a>
-                        <a href="#">Services</a>
-                        <a href="#">Available Listings</a>
-                        <a href="#">Blog</a>
+                        <a href="index.html#services">Services</a>
+                        <a href="knowledge center.html">Knowledge Center</a>
+                        <a href="blog.html">Blog</a>
                         <a href="contact us.html">Contact Us</a>
                     </div>
                 </div>
@@ -318,53 +344,7 @@
     </section>
 
     <!-- Footer (from main site) -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <div class="logo">
-                        <img src="assets/img/logo ONLY.png" alt="Rubyland Limited" style="height: auto;">
-                        <span>Rubyland<br>Limited</span>
-                    </div>
-                    <p>With over 24 years of experience, Rubyland Limited is your trusted partner for all real estate needs in Kenya. We provide expert valuation, consultation, and property services to individuals and businesses.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="About Us.html">About Us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Properties</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="contact us.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#">Property Valuation</a></li>
-                        <li><a href="#">Feasibility Studies</a></li>
-                        <li><a href="#">Title Deed Services</a></li>
-                        <li><a href="#">Property Search</a></li>
-                        <li><a href="#">Market Analysis</a></li>
-                        <li><a href="#">Investment Training</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> +254 700 000 000</li>
-                        <li><i class="fas fa-envelope"></i> info@rubyland.co.ke</li>
-                        <li><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</li>
-                        <li><i class="fas fa-clock"></i> Sat: 9:00 AM - 1:00 PM</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Rubyland Limited. All Rights Reserved. | <a href="#">Terms & Conditions</a> | <a href="#">Privacy Policy</a></p>
-            </div>
-        </div>
-    </footer>
+    <footer-component></footer-component>
 
     <script>
         // Simple script to handle navbar scroll effect on 404 page

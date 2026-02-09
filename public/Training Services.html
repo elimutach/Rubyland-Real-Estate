@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Training Services | Rubyland Limited - Empower Your Investment Groups</title>
+    
+    <!-- SEO & Meta Tags -->
+    <meta name="description" content="Professional real estate training for investment groups, chamas, and institutions. Empower your team with expert knowledge to make prudent real estate decisions.">
+    <meta name="keywords" content="real estate training Kenya, investment training, chama training, property investment education, real estate workshops">
+    
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo ONLY.png"/>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="Assets/css/main.css"/>
+    <script src="Assets/js/header.js" type="text/javascript" defer></script>
+    <script src="Assets/js/footer.js" type="text/javascript" defer></script>
+    <style>
+        /* ===== TRAINING SERVICES PAGE STYLES ===== */
+        :root {
+            --training-green: #00a859;
+            --training-light-green: #e6f7f0;
+            --training-orange: #ff6b35;
+            --training-light-orange: #fff0e6;
+            --training-blue: #0066cc;
+            --training-light-blue: #e6f2ff;
+        }
+        
+        /* Hero Section */
+        .training-hero {
+            height: 85vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .training-hero-content {
+            max-width: 900px;
+            padding: 0 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .training-hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            color: var(--white);
+        }
+        
+        .training-hero h1 span {
+            color: var(--training-green);
+        }
+        
+        .training-stats-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .training-stat-item {
+            text-align: center;
+            animation: fadeInUp 1s ease-out 0.6s forwards;
+            opacity: 0;
+        }
+        
+        .training-stat-number {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--training-green);
+            display: block;
+            margin-bottom: 5px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .training-stat-text {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Why Training Matters */
+        .why-training {
+            background: var(--light-gray);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .why-training-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .why-training-content h2 {
+            color: var(--training-green);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .why-training-content h2:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--training-green);
+        }
+        
+        .why-training-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-strong);
+            position: relative;
+            height: 500px;
+        }
+        
+        .why-training-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .why-training-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        .training-tagline {
+            background: var(--training-light-green);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-top: 30px;
+            border-left: 4px solid var(--training-green);
+            font-style: italic;
+            font-weight: 500;
+        }
+        
+        /* Training Features */
+        .training-features {
+            background: var(--white);
+        }
+        
+        .training-features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .training-feature-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            position: relative;
+            height: 100%;
+        }
+        
+        .training-feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .training-feature-card:hover .training-feature-icon {
+            background: var(--training-green);
+            color: var(--white);
+        }
+        
+        .training-feature-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(0, 168, 89, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 30px auto 25px;
+            color: var(--training-green);
+            font-size: 32px;
+            transition: var(--transition);
+        }
+        
+        .training-feature-content {
+            padding: 0 25px 30px;
+            text-align: center;
+        }
+        
+        .training-feature-content h3 {
+            margin-bottom: 15px;
+            color: var(--dark-gray);
+        }
+        
+        /* Training Stats */
+        .training-stats-section {
+            background: linear-gradient(135deg, var(--training-green) 0%, var(--training-blue) 100%);
+            color: var(--white);
+            padding: 80px 0;
+        }
+        
+        .training-stats-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        
+        .training-stat-box {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+        
+        .training-stat-box:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .training-stat-box-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--white);
+            display: block;
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .training-stat-box-text {
+            font-size: 1rem;
+            font-weight: 500;
+        }
+        
+        /* Due Diligence Process */
+        .training-process {
+            background: var(--light-gray);
+        }
+        
+        .training-process-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .training-process-timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 100%;
+            background:#cf0202 ;
+        }
+        
+        .training-process-step {
+            margin-bottom: 50px;
+            position: relative;
+            width: 50%;
+            padding-right: 40px;
+        }
+        
+        .training-process-step:nth-child(even) {
+            margin-left: 50%;
+            padding-right: 0;
+            padding-left: 40px;
+        }
+        
+        .training-process-dot {
+            position: absolute;
+            top: 30px;
+            right: -10px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--training-green);
+            border: 4px solid var(--white);
+            box-shadow: 0 0 0 4px var(--training-green);
+        }
+        
+        .training-process-step:nth-child(even) .training-process-dot {
+            right: auto;
+            left: -10px;
+        }
+        
+        .training-process-content {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-soft);
+            position: relative;
+        }
+        
+        .training-process-content h3 {
+            color: var(--training-green);
+            margin-bottom: 10px;
+        }
+        
+        .training-process-number {
+            display: inline-block;
+            background:#cf0202;
+            color: var(--white);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        
+        /* Benefits Grid */
+        .benefits-section {
+            background: var(--white);
+            padding: 100px 0;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        
+        .benefit-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 40px 30px;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .benefit-card:nth-child(1) {
+            border-top: 4px solid var(--training-green);
+        }
+        
+        .benefit-card:nth-child(2) {
+            border-top: 4px solid var(--training-orange);
+        }
+        
+        .benefit-card:nth-child(3) {
+            border-top: 4px solid var(--training-blue);
+        }
+        
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(0, 168, 89, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--training-green);
+            font-size: 28px;
+            transition: var(--transition);
+        }
+        
+        .benefit-card:hover .benefit-icon {
+            background:#cf0202;
+            color: var(--white);
+            transform: rotate(360deg);
+        }
+        
+        /* CTA Section */
+        .training-cta {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+                        url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80') no-repeat center center/cover;
+            color: var(--white);
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        .training-cta h2 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+        
+        .training-cta p {
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .training-cta-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .training-cta-stat {
+            text-align: center;
+        }
+        
+        .training-cta-stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--training-green);
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .training-cta-stat-text {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .training-features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .why-training-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .training-stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .training-process-timeline:before {
+                left: 30px;
+            }
+            
+            .training-process-step {
+                width: 100%;
+                padding-right: 0;
+                padding-left: 70px;
+            }
+            
+            .training-process-step:nth-child(even) {
+                margin-left: 0;
+                padding-left: 70px;
+            }
+            
+            .training-process-dot {
+                left: 21px;
+                right: auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .training-hero {
+                height: 90vh;
+            }
+            
+            .training-features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .training-stats-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <div class="navbar-section">
+        <header-component></header-component>
+    </div>
+
+    <!-- Training Services Hero -->
+    <section class="training-hero">
+        <div class="training-hero-content">
+            <h1>Real Estate <span>Training</span> & Advisory</h1>
+            <p>Empower investment groups, chamas, and institutions with expert knowledge to make prudent real estate decisions and maximize returns.</p>
+            <a href="contact us.html" class="btn btn-primary">Start Your Training Journey</a>
+            
+            <div class="training-stats-row">
+                <div class="training-stat-item">
+                    <span class="training-stat-number">500+</span>
+                    <span class="training-stat-text">Trained Investors</span>
+                </div>
+                <div class="training-stat-item">
+                    <span class="training-stat-number">98%</span>
+                    <span class="training-stat-text">Satisfaction Rate</span>
+                </div>
+                <div class="training-stat-item">
+                    <span class="training-stat-number">50+</span>
+                    <span class="training-stat-text">Investment Groups</span>
+                </div>
+                <div class="training-stat-item">
+                    <span class="training-stat-number">24+</span>
+                    <span class="training-stat-text">Years Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Training Matters -->
+    <section class="section why-training">
+        <div class="container">
+            <div class="why-training-container">
+                <div class="why-training-content animate-on-scroll">
+                    <h2>Why Real Estate Training Matters</h2>
+                    <p>Education is the foundation of successful real estate investment. Many investment groups and chamas enter the property market with enthusiasm but lack the critical knowledge needed to navigate its complexities.</p>
+                    <p>Our training services bridge this gap by providing practical, actionable knowledge that transforms enthusiasm into profitable investment decisions. We focus on real-world scenarios, risk assessment, and strategic planning.</p>
+                    <p>Proper education reduces risk, fosters disciplined investment planning, and maximizes outcomes. It transforms uncertainty into confidence and turns investment groups into savvy property investors.</p>
+                    
+                    <div class="training-tagline">
+                        "Knowledge reduces risk and transforms investment enthusiasm into profitable decisions."
+                    </div>
+                </div>
+                <div class="why-training-image animate-on-scroll">
+                    <img src="https://ewuyalhslafkrlmrpyam.supabase.co/storage/v1/object/public/rubyland/ExpertTraining.jpg" alt="Training Session">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Features -->
+    <section class="section training-features">
+        <div class="container">
+            <h2 class="section-title">Our Training Approach</h2>
+            <div class="training-features-grid">
+                <div class="training-feature-card animate-on-scroll">
+                    <div class="training-feature-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <div class="training-feature-content">
+                        <h3>Interactive Workshops</h3>
+                        <p>Engaging, hands-on workshops that cover real estate fundamentals, market analysis, and investment strategies tailored to your group's needs.</p>
+                    </div>
+                </div>
+                
+                <div class="training-feature-card animate-on-scroll">
+                    <div class="training-feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="training-feature-content">
+                        <h3>Investment Strategy Sessions</h3>
+                        <p>One-on-one or group strategy sessions to develop customized investment plans aligned with your financial goals and risk tolerance.</p>
+                    </div>
+                </div>
+                
+                <div class="training-feature-card animate-on-scroll">
+                    <div class="training-feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="training-feature-content">
+                        <h3>Group Training Modules</h3>
+                        <p>Structured training programs designed specifically for investment groups, chamas, and corporate teams with progressive learning paths.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Training Stats -->
+    <section class="training-stats-section">
+        <div class="container">
+            <h2 class="section-title" style="color: var(--white);">Training Excellence</h2>
+            <div class="training-stats-container">
+                <div class="training-stat-box animate-on-scroll">
+                    <span class="training-stat-box-number">500+</span>
+                    <span class="training-stat-box-text">Trained Investors</span>
+                </div>
+                <div class="training-stat-box animate-on-scroll">
+                    <span class="training-stat-box-number">50+</span>
+                    <span class="training-stat-box-text">Investment Groups</span>
+                </div>
+                <div class="training-stat-box animate-on-scroll">
+                    <span class="training-stat-box-number">98%</span>
+                    <span class="training-stat-box-text">Satisfaction Rate</span>
+                </div>
+                <div class="training-stat-box animate-on-scroll">
+                    <span class="training-stat-box-number">24+</span>
+                    <span class="training-stat-box-text">Years Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Due Diligence Process -->
+    <section class="section training-process">
+        <div class="container">
+            <h2 class="section-title">Our Training & Advisory Process</h2>
+            <div class="training-process-timeline">
+                <div class="training-process-step animate-on-scroll">
+                    <div class="training-process-dot"></div>
+                    <div class="training-process-content">
+                        <span class="training-process-number">Step 1</span>
+                        <h3>What We Do</h3>
+                        <p>We conduct comprehensive workshops and seminars covering real estate fundamentals, market analysis, due diligence, and investment strategies. Our interactive sessions include practical exercises and real case studies.</p>
+                        <ul style="margin-top: 15px; padding-left: 20px;">
+                            <li>Interactive Workshops & Seminars</li>
+                            <li>Investment Strategy Sessions</li>
+                            <li>Customized Group Training Modules</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="training-process-step animate-on-scroll">
+                    <div class="training-process-dot"></div>
+                    <div class="training-process-content">
+                        <span class="training-process-number">Step 2</span>
+                        <h3>Who Benefits</h3>
+                        <p>Our training services are designed for various investment groups and organizations seeking to build real estate expertise and make informed investment decisions.</p>
+                        <ul style="margin-top: 15px; padding-left: 20px;">
+                            <li>Investment Groups & Chamas</li>
+                            <li>Corporate Teams & Institutions</li>
+                            <li>Individual Real Estate Investors</li>
+                            <li>Financial Advisory Teams</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="training-process-step animate-on-scroll">
+                    <div class="training-process-dot"></div>
+                    <div class="training-process-content">
+                        <span class="training-process-number">Step 3</span>
+                        <h3>Deliverables</h3>
+                        <p>Each training engagement includes comprehensive materials and ongoing support to ensure lasting impact and practical application of knowledge.</p>
+                        <ul style="margin-top: 15px; padding-left: 20px;">
+                            <li>Comprehensive Training Materials</li>
+                            <li>Customized Advisory Recommendations</li>
+                            <li>Dedicated Follow-up Sessions</li>
+                            <li>Ongoing Support & Consultation</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="training-process-step animate-on-scroll">
+                    <div class="training-process-dot"></div>
+                    <div class="training-process-content">
+                        <span class="training-process-number">Step 4</span>
+                        <h3>Ready to Enroll?</h3>
+                        <p>Empower your team with expert guidance and transform your investment approach. Our training will equip you with the knowledge and tools to make prudent real estate decisions and maximize your returns.</p>
+                        <p style="margin-top: 15px; font-weight: 600; color: var(--training-green);">Take the first step toward investment excellence.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Grid -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Training Benefits</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Risk Reduction</h3>
+                    <p>Education significantly reduces investment risks by providing knowledge to identify and avoid common pitfalls in real estate transactions.</p>
+                </div>
+                
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Maximized Returns</h3>
+                    <p>Informed investors make better decisions, leading to higher returns on investment and optimized portfolio performance.</p>
+                </div>
+                
+                <div class="benefit-card animate-on-scroll">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3>Group Empowerment</h3>
+                    <p>Build collective expertise within your investment group, ensuring consistent decision-making and shared understanding of real estate principles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="training-cta">
+        <div class="container">
+            <h2>Ready to Empower Your Investment Team?</h2>
+            <p>Join dozens of investment groups and chamas who have transformed their real estate investment approach through our expert training and advisory services.</p>
+            <a href="contact us.html" class="btn btn-primary" style="background: #cf0202; border-color: #cf0202;">Start Your Training Journey</a>
+            
+            <div class="training-cta-stats">
+                <div class="training-cta-stat animate-on-scroll">
+                    <span class="training-cta-stat-number">500+</span>
+                    <span class="training-cta-stat-text">Empowered Investors</span>
+                </div>
+                <div class="training-cta-stat animate-on-scroll">
+                    <span class="training-cta-stat-number">50+</span>
+                    <span class="training-cta-stat-text">Successful Groups</span>
+                </div>
+                <div class="training-cta-stat animate-on-scroll">
+                    <span class="training-cta-stat-number">98%</span>
+                    <span class="training-cta-stat-text">Success Rate</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer-component></footer-component>
+
+    <script src="Assets/js/main.js"></script>
+    <script>
+        // Training Services Page Scripts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Scroll Animations
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.85 &&
+                    rect.bottom >= 0
+                );
+            }
+            
+            function handleScrollAnimation() {
+                document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                    if (isElementInViewport(el)) {
+                        el.classList.add('animated');
+                    }
+                });
+            }
+            
+            // Initial check
+            handleScrollAnimation();
+            
+            // Listen for scroll
+            window.addEventListener('scroll', handleScrollAnimation);
+            
+            // Animate stats on load
+            setTimeout(() => {
+                document.querySelectorAll('.training-stat-item').forEach((stat, index) => {
+                    setTimeout(() => {
+                        stat.classList.add('animated');
+                    }, index * 200);
+                });
+            }, 500);
+            
+            // Feature card animations
+            document.querySelectorAll('.training-feature-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    const icon = this.querySelector('.training-feature-icon');
+                    icon.style.transform = 'rotate(360deg) scale(1.1)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    const icon = this.querySelector('.training-feature-icon');
+                    icon.style.transform = 'rotate(0) scale(1)';
+                });
+            });
+            
+            // Benefit card animations
+            document.querySelectorAll('.benefit-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-15px)';
+                    const icon = this.querySelector('.benefit-icon');
+                    icon.style.transform = 'scale(1.2)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    const icon = this.querySelector('.benefit-icon');
+                    icon.style.transform = 'scale(1)';
+                });
+            });
+            
+            // Process step animations
+            document.querySelectorAll('.training-process-step').forEach(step => {
+                step.addEventListener('mouseenter', function() {
+                    const dot = this.querySelector('.training-process-dot');
+                    dot.style.transform = 'scale(1.5)';
+                });
+                
+                step.addEventListener('mouseleave', function() {
+                    const dot = this.querySelector('.training-process-dot');
+                    dot.style.transform = 'scale(1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

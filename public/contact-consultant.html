@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
+    <title>Book Consultation | Rubyland Limited</title>
+    <meta name="description" content="Book a professional real estate consultation with Rubyland Limited. Expert advice on property investment, valuation, and market analysis in Kenya.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/logo ONLY.png">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="Assets/css/main.css">
+    <link rel="stylesheet" href="Assets/css/consultancy.css">
+    
+    <!-- Cally Calendar Component -->
+    <script type="module" src="https://unpkg.com/cally"></script>
+    
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="Assets/js/header.js" type="text/javascript" defer></script>
+    <script src="Assets/js/footer.js" type="text/javascript" defer></script>
+    <script type="text/javascript">
+        emailjs.init('ZSlUX3HD3vo75GT0X'); // Replace with your EmailJS public key
+    </script>
+</head>
+<body>
+    <div class="form-group">
+                        <label for="consultationDate" class="form-label">Preferred Consultation Date *</label>
+                        <div class="date-picker-container">
+                            <button type="button" popovertarget="cally-popover1" class="date-picker-button" id="cally1" style="anchor-name:--cally1">
+                                <i class="fas fa-calendar-alt"></i> Select Date
+                            </button>
+                            <div popover id="cally-popover1" class="cally-popover dropdown bg-base-100 rounded-box shadow-lg" style="position-anchor:--cally1">
+                                <calendar-date class="cally">
+                                    <svg aria-label="Previous" class="fill-current size-4" slot="previous" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.75 19.5 8.25 12l7.5-7.5"></path></svg>
+                                    <svg aria-label="Next" class="fill-current size-4" slot="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m8.25 4.5 7.5 7.5-7.5 7.5"></path></svg>
+                                    <calendar-month></calendar-month>
+                                </calendar-date>
+                            </div>
+                            <input type="hidden" id="consultationDate" name="consultationDate" required>
+                        </div>
+                    </div>
+                    <script src="Assets/js/main.js"></script>
+                    <script src="Assets/js/consultancy.js"></script>
+</body>
+</html>

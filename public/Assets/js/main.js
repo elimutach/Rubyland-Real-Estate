@@ -1,26 +1,5 @@
 // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.main-navbar');
-            const mobileNavabr = document.querySelector('.mobile-toggle');
-            const contactNavbar = document.querySelector('.contact-navbar');
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
-                mobileNavabr.classList.add('scrolled');
-                contactNavbar.style.background = 'var(--dark-gray)';
-            } else {
-                navbar.classList.remove('scrolled');
-                mobileNavabr.classList.add('scrolled');
-                contactNavbar.style.background = 'transparent';
-            }
-        });
-
-        // Mobile menu toggle
-        const mobileToggle = document.querySelector('.mobile-toggle');
-        const navLinks = document.querySelector('.nav-links');
         
-        mobileToggle.addEventListener('click', function() {
-            navLinks.classList.toggle('active');
-        });
 
         // Testimonial slider
         const testimonialTrack = document.querySelector('.testimonial-track');
@@ -233,18 +212,32 @@ window.addEventListener("resize", activateVerticalSteps);
 
         // Partners slider (automatic)
         const partnersTrack = document.querySelector('.partners-track');
-        let partnerPosition = 0;
-        
-        function movePartners() {
-            partnerPosition -= 1;
-            if (partnerPosition < -600) {
-                partnerPosition = 0;
-            }
-            partnersTrack.style.transform = `translateX(${partnerPosition}px)`;
-            requestAnimationFrame(movePartners);
-        }
-        
-        movePartners();
+        let partnerPosition;
+const speed = 0.18;
+
+function movePartners() {
+  const trackWidth = partnersTrack.scrollWidth;
+  const screenWidth = window.innerWidth;
+
+  // Initialize once
+  if (partnerPosition === undefined) {
+    partnerPosition = -trackWidth;
+  }
+
+  partnerPosition += speed;
+
+  // When fully past the right side, reset to far left
+  if (partnerPosition >= screenWidth) {
+    partnerPosition = -trackWidth;
+  }
+
+  partnersTrack.style.transform = `translateX(${partnerPosition}px)`;
+  requestAnimationFrame(movePartners);
+}
+
+movePartners();
+
+
 
         // Analytics events
         document.querySelectorAll('a[href], button').forEach(element => {

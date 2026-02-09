@@ -934,14 +934,17 @@ margin-bottom:50px;
             max-width:2000px;
         }
         .services-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap:50px;
-        }
-        .services-container {
-            max-width: 1500px;
-            margin: 0 auto;
-        }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+.service-item {
+    width: 100%;
+    margin: 0 auto;
+}
         
         .service-item {
             display: flex;
@@ -952,21 +955,32 @@ margin-bottom:50px;
             background: var(--light-gray);
             transition: var(--transition);
         }
+
+        .services-dropdown {
+            min-width: 550px;
+            padding: 15px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            left:-150px;
+            max-width: 650px;
+        }
+
         
         .service-icon {
-            width: 10px;
-            height: 10px;
-            background: var(--primary-red);
+            width: 5px;
+            height: 5px;
+            background: var(--light-red);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--white);
-            font-size: 24px;
+            font-size: 16px;
             flex-shrink: 0;
-            justify-items: center;
-            align-self: center;
-            margin-left:10px;
+            color: var(--primary-red);
+            transition: 0.1s ease-in;
+            margin-left:2px;
+            padding: 1.3rem ;
         }
         
         .service-content h4 {
@@ -1092,6 +1106,23 @@ margin-bottom:50px;
         }
         
         /* Responsive */
+        @media (max-width: 1200px) {
+            .story-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .cards-grid, .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .mv-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
         @media (max-width: 992px) {
             .story-container {
                 grid-template-columns: 1fr;
@@ -1128,13 +1159,21 @@ margin-bottom:50px;
                 left: 21px;
                 right: auto;
             }
+            
         }
         
         @media (max-width: 768px) {
             .section {
                 padding: 70px 0;
             }
-            
+
+            .about-hero {
+                height: 105vh;
+            }
+            .hero-content {
+                margin-top: 30px;
+                margin-bottom: 20px;
+            }
             .cards-grid, .team-grid {
                 grid-template-columns: 1fr;
             }
@@ -1146,6 +1185,10 @@ margin-bottom:50px;
             .stat-number {
                 font-size: 2rem;
             }
+
+            .team-card {
+                width: 100%;
+            }
             
             .graph-container {
                 padding: 20px;
@@ -1154,6 +1197,15 @@ margin-bottom:50px;
             .map-container {
                 height: 400px;
             }
+
+            .services-container {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        padding: 0;
+        position: relative;
+        left: -160px;
+        justify-content: center;
+    }
             
             .footer-grid {
                 grid-template-columns: 1fr;
@@ -1169,9 +1221,19 @@ margin-bottom:50px;
                 font-size: 1rem;
             }
             
-            .service-item {
+            .about-service {
                 flex-direction: column;
                 text-align: center;
             }
+            
+            .about-service {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .service-icon {
+        margin-bottom: 10px;
+    }
         }
     

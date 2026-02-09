@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
     <title>Rubyland Limited | Luxury Real Estate Redefined</title>
     <meta name="description" content="Rubyland Limited: Your trusted partner in property solutions for over 24 years. Expert valuation, consultation, and property services in Kenya.">
+
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css" />
 
     
     <!-- Favicon -->
@@ -20,6 +22,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Rubyland Limited | Luxury Real Estate Redefined">
     <meta property="og:description" content="Your trusted partner in property solutions for over 24 years. Expert valuation, consultation, and property services in Kenya.">
+
     <meta property="og:image" content="assets/images/logo-highres.png">
     <meta property="og:url" content="https://rubyland.co.ke">
     <meta property="og:type" content="website">
@@ -36,7 +39,7 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "RealEstateAgent",
+      "@type": "RealEstateConsultingServices",
       "name": "Rubyland Limited",
       "description": "Your trusted partner in property solutions for over 24 years",
       "url": "https://rubyland.co.ke",
@@ -56,131 +59,37 @@
       "logo": "assets/images/logo-highres.png"
     }
     </script>
+    <script src="Assets/js/header.js" type="text/javascript" defer></script>
+    <script src="Assets/js/footer.js" type="text/javascript" defer></script>
 </head>
 <body>
-    <!-- Contact Navbar -->
-    <div class="contact-navbar">
-        <div class="container">
-            <div class="contact-info">
-                <div><i class="fas fa-phone"></i> +254 700 000 000</div>
-                <div><i class="fas fa-envelope"></i> info@rubyland.co.ke</div>
-            </div>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-        </div>
-    </div>
+    <!--Hedaer-->
+    <header-component></header-component>
 
-    <!-- Main Navbar -->
-    <nav class="main-navbar">
-        <div class="container navbar-container">
-            <a href="#" class="logo"><img src="Assets/img/logo ONLY.png" alt="">Ruby<span>land</span></a>
-            <div class="mobile-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li class="dropdown">
-                    <a href="About Us.html">About Us <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-content">
-                        <a href="About Us.html#what-is-rubyland">Who We Are</a>
-                        <a href="About Us.html#the-team">The Team</a>
-                        <a href="About Us.html#our-story">Our Story</a>
-                        <a href="About Us.html#branches">Branches</a>
-                    </div>
-                </li>
-                <li class="dropdown">
-                    <a href="#">Services <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown-content services-dropdown">
-                        <div class="service-item" onclick="window.location.href='Property managment.html'">
-                            <div class="service-icon">
-                                <i class="fas fa-home"></i>
-                            </div>
-                            <div class="service-info">
-                                <h4>Property Valuation</h4>
-                                <p>Accurate property assessments for various purposes</p>
-                            </div>
-                        </div>
-                        <div class="service-item" onclick="window.location.href='Feasibility Study.html'">
-                            <div class="service-icon">
-                                <i class="fas fa-search"></i>
-                            </div>
-                            <div class="service-info">
-                                <h4>Property Search</h4>
-                                <p>Find your ideal property with our expert guidance</p>
-                            </div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fas fa-file-contract"></i>
-                            </div>
-                            <div class="service-info">
-                                <h4>Title Deed Services</h4>
-                                <p>Secure and verify your property ownership documents</p>
-                            </div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <div class="service-info">
-                                <h4>Market Analysis</h4>
-                                <p>Comprehensive real estate market insights</p>
-                            </div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fas fa-handshake"></i>
-                            </div>
-                            <div class="service-info">
-                                <h4>Consultation</h4>
-                                <p>Expert advice for all your real estate concerns</p>
-                            </div>
-                        </div>
-                        <div class="service-item">
-                            <div class="service-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <div class="service-info">
-                                <h4>Training</h4>
-                                <p>Real estate investment education and workshops</p>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="listing.html">Available Listings</a></li>
-                <li><a href="contact us.html">Contact Us</a></li>
-            </ul>
-        </div>
-    </nav>
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h1>Real Estate <span>Redefined</span></h1>
             <p>Your trusted partner in property solutions for over 24 years</p>
             <div class="hero-buttons">
-                <a href="#" class="btn btn-primary" id="cta-book">Book a Site Visit</a>
-                <a href="#" class="btn btn-outline">Explore Properties</a>
+                <a href="consultancy.html" class="btn btn-primary" id="cta-book">Book a Consultation Visit</a>
+                <a href="contact us.html" class="btn btn-outline">Let Us Help You</a>
             </div>
             <div class="trust-badges">
                 <div class="badge">
-                    <div class="badge-number">24+</div>
+                    <div class="badge-number" style="color:#ffd700;">24+</div>
                     <div class="badge-text">Years</div>
                 </div>
                 <div class="badge">
-                    <div class="badge-number">1,000+</div>
+                    <div class="badge-number" style="color:#ffd700;">1,000+</div>
                     <div class="badge-text">Valuations</div>
                 </div>
                 <div class="badge">
-                    <div class="badge-number">$1.2M+</div>
+                    <div class="badge-number" style="color:#ffd700;">$1.2M+</div>
                     <div class="badge-text">Feasibility</div>
                 </div>
                 <div class="badge">
-                    <div class="badge-number">100%</div>
+                    <div class="badge-number" style="color:#ffd700;">100%</div>
                     <div class="badge-text">Title Verified</div>
                 </div>
             </div>
@@ -200,7 +109,7 @@
                     </div>
                         <h3>Title Deed Concerns</h3>
                         <p>Worried about property ownership documentation and potential disputes?</p>
-                        <a href="#" class="point-cta">How we secure titles <i class="fas fa-arrow-right"></i></a>
+                        <a href="Due Diligence Services.html" class="point-cta">How we secure titles <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="point-card">
@@ -211,7 +120,7 @@
                     </div> 
                     <h3>Property Search Fatigue</h3>
                         <p>Spending too much time searching for the right property without results?</p>
-                        <a href="#" class="point-cta">Our search process <i class="fas fa-arrow-right"></i></a>
+                        <a href="Real Estate Valuations & Appraisal.html" class="point-cta">Our search process <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="point-card">
@@ -222,7 +131,7 @@
                     </div>
                         <h3>Investment Uncertainty</h3>
                         <p>Unsure about property values and potential return on investment?</p>
-                        <a href="#" class="point-cta">Investment analysis <i class="fas fa-arrow-right"></i></a>
+                        <a href="Consultancy Services.html" class="point-cta">Investment analysis <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 <div class="point-card">
@@ -233,7 +142,7 @@
                     </div>
                         <h3>Legal Complexity</h3>
                         <p>Navigating real estate laws and regulations causing stress?</p>
-                        <a href="#" class="point-cta">Legal support <i class="fas fa-arrow-right"></i></a>
+                        <a href="Due Diligence Services.html" class="point-cta">Legal support <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -245,11 +154,11 @@
         <div class="container purpose-container">
             <div class="purpose-content">
                 <h2>For all your Real Estate Concerns!</h2>
-                <p>The complexity of Real Estate can be frustrating and stressful, causing many to miss out on its benefits. With over 24 years of experience, Rubyland Limited guides you through potential pitfalls while maximizing your real estate advantages.</p>
-                <a href="#" class="btn btn-primary">Get a Free Valuation</a>
+                <p>The complexity of Real Estate can be frustrating and stressful, causing many to miss out on its benefits. With over 24+ years of experience, Rubyland Limited guides you through potential pitfalls while maximizing your real estate advantages.</p>
+                <a href="contact us.html" class="btn btn-primary">Get A Valuation Today</a>
             </div>
             <div class="purpose-image">
-                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1973&q=80" alt="Rubyland Purpose">
+                <img src="https://ewuyalhslafkrlmrpyam.supabase.co/storage/v1/object/public/rubyland/RealEstate.jpg" alt="Rubyland Purpose">
             </div>
         </div>
     </section>
@@ -287,6 +196,7 @@
         <!-- STEP 1 (LEFT) -->
         <div class="process-step left">
             <div class="process-content">
+                <span class="home-process-number">Step 1</span>
                 <h3>Consultation</h3>
                 <p>We understand your goals, location preferences, timelines, and investment plans.</p>
             </div>
@@ -309,6 +219,7 @@
             </div>
 
             <div class="process-content">
+                <span class="home-process-number">Step 2</span>
                 <h3>Property Screening</h3>
                 <p>We shortlist verified properties that match your budget and title requirements.</p>
             </div>
@@ -317,6 +228,7 @@
         <!-- STEP 3 (LEFT) -->
         <div class="process-step left">
             <div class="process-content">
+                <span class="home-process-number">Step 3</span>
                 <h3>Due Diligence</h3>
                 <p>We run title checks, registry searches, and valuation reports.</p>
             </div>
@@ -339,6 +251,7 @@
             </div>
 
             <div class="process-content">
+                <span class="home-process-number">Step 4</span>
                 <h3>Site Visit</h3>
                 <p>You confirm location, boundaries, infrastructure, and development potential.</p>
             </div>
@@ -347,6 +260,7 @@
         <!-- STEP 5 (LEFT) -->
         <div class="process-step left">
             <div class="process-content">
+                <span class="home-process-number">Step 5</span>
                 <h3>Documentation</h3>
                 <p>We handle legal agreements, payments, transfers, and compliance.</p>
             </div>
@@ -369,6 +283,7 @@
             </div>
 
             <div class="process-content">
+                <span class="home-process-number">Step 7</span>
                 <h3>Handover & Support</h3>
                 <p>You receive ownership confirmation and post-purchase support.</p>
             </div>
@@ -382,7 +297,7 @@
 
 
     <!-- Services Section -->
-    <section class="section services">
+    <section id="services" class="section services">
         <div class="container">
             <h2 class="section-title">What We Deliver</h2>
             <div class="services-grid">
@@ -391,19 +306,19 @@
                         <i class="fas fa-home"></i>
                     </div>
                     <div class="service-content">
-                        <h3>Valuation Services</h3>
-                        <p>Thousands of valuations for financial institutions, helping clients access credit financing with professional property assessment.</p>
-                        <a href="#" class="btn btn-outline-dark">Learn More</a>
+                        <h3>Property Management & Sales</h3>
+                        <p>End-to-end property management and sales grounded in verification, performance analysis, and secure, informed transactions.</p>
+                        <a href="Property managment.html" class="btn btn-outline-dark">Learn More</a>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon-large">
-                        <i class="fas fa-search"></i>
+                    <i class="ti ti-calculator"></i>
                     </div>
                     <div class="service-content">
                         <h3>Feasibility Studies</h3>
                         <p>Worth over USD 1.2 Million in property investments, helping investors optimize property investments and maximize potential.</p>
-                        <a href="#" class="btn btn-outline-dark">Learn More</a>
+                        <a href="Feasibility Study.html" class="btn btn-outline-dark">Learn More</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -411,9 +326,9 @@
                         <i class="fas fa-file-contract"></i>
                     </div>
                     <div class="service-content">
-                        <h3>Title Security</h3>
-                        <p>Protection against title deed issues, verification of land registry records, and resolution of ownership disputes.</p>
-                        <a href="#" class="btn btn-outline-dark">Learn More</a>
+                        <h3>Due Diligence</h3>
+                        <p>Comprehensive due diligence verifying ownership, legality, risks, and compliance before any real estate commitment is made.</p>
+                        <a href="Due Diligence Services.html" class="btn btn-outline-dark">Learn More</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -421,19 +336,19 @@
                         <i class="fas fa-building"></i>
                     </div>
                     <div class="service-content">
-                        <h3>Property Search</h3>
-                        <p>Expert assistance in house hunting, office space identification, leveraging industry connections for optimal results.</p>
-                        <a href="#" class="btn btn-outline-dark">Learn More</a>
+                        <h3>Real Estate Valuations</h3>
+                        <p>Independent real estate valuations delivering accurate, defensible market values for financing, investment, and legal purposes.</p>
+                        <a href="Real Estate Valuations & Appraisal.html" class="btn btn-outline-dark">Learn More</a>
                     </div>
                 </div>
                 <div class="service-card">
                     <div class="service-icon-large">
-                        <i class="fas fa-chart-bar"></i>
+                        <i class="ti ti-headset"></i>
                     </div>
                     <div class="service-content">
-                        <h3>Market Analysis</h3>
-                        <p>Comprehensive market trend analysis, identification of investment opportunities, risk assessment and mitigation strategies.</p>
-                        <a href="#" class="btn btn-outline-dark">Learn More</a>
+                        <h3>Property Consultancy</h3>
+                        <p>Strategic real estate consultancy delivering clarity, risk reduction, and confident decision-making for investors and institutions.</p>
+                        <a href="Property Consultancy.html" class="btn btn-outline-dark">Learn More</a>
                     </div>
                 </div>
                 <div class="service-card">
@@ -441,9 +356,9 @@
                         <i class="fas fa-graduation-cap"></i>
                     </div>
                     <div class="service-content">
-                        <h3>Investment Training</h3>
+                        <h3>Real Estate Investment Training</h3>
                         <p>Real estate investment education, group investment dynamics, risk management strategies for confident investing.</p>
-                        <a href="#" class="btn btn-outline-dark">Learn More</a>
+                        <a href="Real Estate Investment Training.html" class="btn btn-outline-dark">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -878,7 +793,7 @@
     <!-- Partners Section -->
     <section class="partners">
         <div class="container">
-            <h2 class="section-title">Our Trusted Partners</h2>
+        <h2 class="section-title">Our Trusted Partners</h2>
             <div class="partners-slider">
                 <div class="partners-track">
                     <div class="partner-logo">
@@ -903,7 +818,7 @@
             </div>
             <div class="compliance">
                 <p>Fully licensed and accredited by the relevant Kenyan regulatory bodies | License No: REA/12345/2024</p>
-                <a href="assets/downloads/rubyland-compliance-certificate.pdf" download>Download Compliance Certificate</a>
+                <a href="assets/downloads/rubyland-compliance-certificate.pdf" download><i class="ti ti-download"></i><span>Download Compliance Certificate</span></a>
             </div>
         </div>
     </section>
@@ -914,65 +829,13 @@
             <h2>Ready to secure your property?</h2>
             <p>Book a site visit with our expert team today</p>
             <div class="cta-buttons">
-                <a href="#" class="btn btn-primary">Book a Site Visit</a>
-                <a href="#" class="btn btn-outline">Consult Our Experts</a>
+                <a href="contact us.html" class="btn btn-primary">Book a Site Visit</a>
+                <a href="consultancy.html" class="btn btn-outline">Consult Our Experts</a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-about">
-                    <div class="logo">
-                        <img src="assets/img/logo ONLY.png" alt="Rubyland Limited" style="height: auto;">
-                        <span>Rubyland<br>Limited</span>
-                    </div>
-                    <p>With over 24 years of experience, Rubyland Limited is your trusted partner for all real estate needs in Kenya. We provide expert valuation, consultation, and property services to individuals and businesses.</p>
-                    <div class="newsletter-form">
-                        <input type="email" placeholder="Your email address" aria-label="Your email address">
-                        <button type="submit">Subscribe</button>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Properties</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#">Property Valuation</a></li>
-                        <li><a href="#">Feasibility Studies</a></li>
-                        <li><a href="#">Title Deed Services</a></li>
-                        <li><a href="#">Property Search</a></li>
-                        <li><a href="#">Market Analysis</a></li>
-                        <li><a href="#">Investment Training</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Office Locations</h4>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Nairobi Headquarters</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Mombasa Branch</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Kisumu Office</li>
-                        <li><i class="fas fa-clock"></i> Mon-Fri: 8:00 AM - 5:00 PM</li>
-                        <li><i class="fas fa-clock"></i> Sat: 9:00 AM - 1:00 PM</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Rubyland Limited. All Rights Reserved. | <a href="assets/downloads/rubyland-terms.pdf" download>Terms & Conditions</a> | <a href="#">Privacy Policy</a></p>
-            </div>
-        </div>
-    </footer>
+<footer-component></footer-component>
 
     <script src="Assets/js/main.js"></script>
 </body>
